@@ -7,5 +7,16 @@
   %body
     %p.notice= notice
     %p.alert= alert
+    %nav
+      =link_to root_path do
+        %p Home
 
-    = yield
+      - if user_signed_in?
+        %p hello!
+      - else
+        = link_to new_user_registration_path do
+          %p Register
+        = link_to new_user_session_path do
+          %p Log In
+
+  = yield
