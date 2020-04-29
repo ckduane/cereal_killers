@@ -9,14 +9,18 @@
     %p.alert= alert
     %nav
       =link_to root_path do
-        %p Home
+        %li Home
 
       - if user_signed_in?
-        %p hello!
+        %li Write a Review
+        = link_to current_user do
+          %li= current_user.username
+        = link_to destroy_user_session_path,:method => :delete do
+          %li Log Out
       - else
         = link_to new_user_registration_path do
-          %p Register
+          %li Register
         = link_to new_user_session_path do
-          %p Log In
+          %li Log In
 
   = yield
