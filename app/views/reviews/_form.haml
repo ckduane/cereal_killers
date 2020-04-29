@@ -1,0 +1,19 @@
+= form_with scope: :review, local: true do |form|
+	.form-group
+		.form-check-label= form.label :brand
+		= form.text_field :brand
+
+		.form-check-label= form.label :name
+		= form.text_field :name
+
+		.form-check-label= form.label :rating
+		= form.radio_button :rating, 1
+		= form.radio_button :rating, 2
+		= form.radio_button :rating, 3
+		= form.radio_button :rating, 4
+		= form.radio_button :rating, 5
+
+		.form-check-label= form.label :comment
+		= form.text_area :comment, size: "30x10"
+
+		= form.submit
