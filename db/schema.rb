@@ -13,7 +13,6 @@
 ActiveRecord::Schema.define(version: 2020_05_02_014851) do
 
   create_table "products", force: :cascade do |t|
-    t.integer "brand_id", null: false
     t.string "name", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
