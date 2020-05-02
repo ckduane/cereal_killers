@@ -12,12 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2020_05_02_014851) do
 
-  create_table "brands", force: :cascade do |t|
-    t.string "name", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "products", force: :cascade do |t|
     t.integer "brand_id", null: false
     t.string "name", null: false
@@ -27,7 +21,7 @@ ActiveRecord::Schema.define(version: 2020_05_02_014851) do
 
   create_table "reviews", force: :cascade do |t|
     t.integer "user_id"
-    t.integer "brand_id", null: false
+    t.integer "product_id", null: false
     t.integer "rating", null: false
     t.text "comment"
     t.datetime "created_at", precision: 6, null: false
