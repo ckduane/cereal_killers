@@ -1,10 +1,10 @@
 = form_with scope: :review, local: true do |form|
 	.form-group
 		.form-check-label= form.label :brand
-		= form.text_field :brand
+		= form.text_field :brand_name
 
 		.form-check-label= form.label :name
-		= form.text_field :name
+		= form.text_field :product_name
 
 		.form-check-label= form.label :rating
 		= form.radio_button :rating, 1
