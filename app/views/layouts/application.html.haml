@@ -10,10 +10,10 @@
     %p.alert= alert
     %nav.nav
       = link_to "Home", root_path, class: "nav-link"
-      = link_to "Cereal Reviews", reviews_path, class: "nav-link"
+      = link_to "Cereal Reviews", products_path, class: "nav-link"
 
       - if user_signed_in?
-        = link_to "Write a Review", new_review_path, class: "nav-link"
+        = link_to "Write a Review", new_product_path, class: "nav-link"
         = link_to current_user, class: "nav-link" do
           = current_user.username
         = link_to "Log Out", destroy_user_session_path,:method => :delete, class: "nav-link"

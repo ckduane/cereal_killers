@@ -7,9 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 products = Product.create([
-	{name: 'Cinammon Toast Crunch'},
-	{name: "Reese's Puffs"}
-])
-
-
+	{ name: 'Cinammon Toast Crunch' },
+	{ name: "Reese's Puffs" },
+	{ name: 'Cookie Crisp' }
 ])

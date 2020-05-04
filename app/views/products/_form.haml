@@ -1,0 +1,19 @@
+= form_for @product do |f|
+
+	.form-group
+		.form-check-label= f.label :name
+		= f.text_field :name, required: true
+
+		= f.fields_for :reviews do |r|
+			.form-check-label= r.label :rating
+			.radio-buttons
+				= r.radio_button :rating, 1
+				= r.radio_button :rating, 2
+				= r.radio_button :rating, 3
+				= r.radio_button :rating, 4
+				= r.radio_button :rating, 5
+
+			.form-check-label= r.label :comment
+			= r.text_area :comment, size: "30x10", required: true
+
+		= f.submit "Save"

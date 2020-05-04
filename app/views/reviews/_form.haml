@@ -1,19 +1,17 @@
-= form_with scope: :review, local: true do |form|
+= form_for [@product, @review] do |f|
+
 	.form-group
-		.form-check-label= form.label :brand
-		= form.text_field :brand_name
+		.form-check-label= f.label :product_name
+		= f.text_field :product
 
-		.form-check-label= form.label :name
-		= form.text_field :product_name
+		.form-check-label= f.label :rating
+		= f.radio_button :rating, 1
+		= f.radio_button :rating, 2
+		= f.radio_button :rating, 3
+		= f.radio_button :rating, 4
+		= f.radio_button :rating, 5
 
-		.form-check-label= form.label :rating
-		= form.radio_button :rating, 1
-		= form.radio_button :rating, 2
-		= form.radio_button :rating, 3
-		= form.radio_button :rating, 4
-		= form.radio_button :rating, 5
+		.form-check-label= f.label :comment
+		= f.text_area :comment, size: "30x10"
 
-		.form-check-label= form.label :comment
-		= form.text_area :comment, size: "30x10"
-
-		= form.submit
+		= f.submit
