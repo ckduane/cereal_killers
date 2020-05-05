@@ -3,7 +3,9 @@ Rails.application.routes.draw do
 
   get 'home/index'
 
-  resources :reviews
+  resources :products do
+  	:reviews
+  end
 
   devise_for :users, controllers: {
   	sessions: 'users/sessions'
