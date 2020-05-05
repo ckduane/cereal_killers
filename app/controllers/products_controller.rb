@@ -1,7 +1,6 @@
 class ProductsController < ApplicationController
-	def new
-		@product = Product.new
-		@product.reviews.build
+	def index
+		@products = Product.all
 	end
 
 	def show
@@ -11,6 +10,12 @@ class ProductsController < ApplicationController
 			@product = Product.find_by(id: params[:id])
 		end
 	end
+	
+	def new
+		@product = Product.new
+		@product.reviews.build
+	end
+
 
 	def create
 		@product = Product.find_or_initialize_by(name: params[:product][:name])
