@@ -39,3 +39,11 @@ a {
 nav {
 	background: $c-yellow;
 }
+
+.bg-img {
+	position: relative;
+	img {
+		position: absolute;
+		width: 100%;
+	}
+}
