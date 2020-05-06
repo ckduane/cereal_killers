@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :reviews
+  has_one_attached :avatar
 
   validates :username, uniqueness: { case_sensitive: false }
   validate :validate_username
