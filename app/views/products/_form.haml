@@ -1,7 +1,7 @@
 = form_for @product do |f|
 
 	.form-group
-		.form-check-label= f.label :name
+		.form-check-label= f.label :cereal_name
 		= f.text_field :name, required: true
 
 		= f.fields_for :reviews do |r|
@@ -13,7 +13,7 @@
 				= r.radio_button :rating, 4
 				= r.radio_button :rating, 5
 
-			.form-check-label= r.label :comment
+			.form-check-label= r.label :review
 			= r.text_area :comment, size: "30x10", required: true
 
 		= f.submit "Save"
