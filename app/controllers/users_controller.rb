@@ -9,4 +9,10 @@ class UsersController < ApplicationController
         format.xml { render :xml => @user }
     end
   end
+
+  private
+
+  def user_params
+  	params.require(:user).permit(:avatar)
+  end
 end

@@ -57,3 +57,5 @@ gem 'bootstrap', '~> 4.4.1'
 gem "haml-rails", "~> 2.0"
 gem 'devise'
 gem "autoprefixer-rails"
+gem "google-cloud-storage", "~> 1.8", require: false
+gem 'mini_magick'

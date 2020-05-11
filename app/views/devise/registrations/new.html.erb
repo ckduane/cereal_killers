@@ -4,6 +4,11 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field form-check-label">
+    <%= f.label :avatar %><br />
+    <%= f.file_field :avatar, accept: 'image/png,image/gif,image/jpeg' %>
+  </div>
+
+  <div class="field form-check-label">
     <%= f.label :username %><br />
     <%= f.text_field :username, autofocus: true %>
   </div>
