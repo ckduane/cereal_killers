@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_07_232331) do
+ActiveRecord::Schema.define(version: 2020_05_11_232537) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -39,14 +39,8 @@ ActiveRecord::Schema.define(version: 2020_05_07_232331) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "reviews", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "product_id", null: false
-    t.integer "rating", null: false
-    t.text "comment"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
+# Could not dump table "reviews" because of following StandardError
+#   Unknown type 'file' for column 'uploads'
 
 # Could not dump table "users" because of following StandardError
 #   Unknown type 'file' for column 'avatar'
