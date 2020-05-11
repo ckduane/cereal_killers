@@ -2,6 +2,8 @@
 
 - if has_reviews?
 	- @product.reviews.each do |r|
+		- if r.user.avatar.present?
+			= image_tag(r.user.thumbnail)
 		%p= r.user.username
 		%p= r.created_at.strftime("%b %-d %Y")
 		%p= r.rating
