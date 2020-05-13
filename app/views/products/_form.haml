@@ -14,6 +14,8 @@
 				= r.radio_button :rating, 5
 
 			.form-check-label= r.label :review
-			= r.text_area :comment, size: "30x10", required: true
+			= r.text_area :comment, size: "30x10", required: true  
 
-		= f.submit "Save"
+
+		%br
+		= f.submit "Submit"

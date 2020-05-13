@@ -1,14 +1,16 @@
-%h2 #{@product.name}
+.container-fluid
+	%h2 #{@product.name}
 
-- if has_reviews?
-	- @product.reviews.each do |r|
-		%p= r.user.username
-		%p= r.created_at.strftime("%b %-d %Y")
-		%p= r.rating
-		%p= r.comment
-- else
-	%p This cereal currently has no reviews.
+	- if has_reviews?
+		- @product.reviews.each do |r|
+			.container
+				%p= r.user.username
+				%p= r.created_at.strftime("%b %-d %Y")
+				%p= r.rating
+				%p= r.comment
+	- else
+		%p This cereal currently has no reviews.
 
-/ - if user_signed_in? && !left_review?
-/ 	%form[action: new_product_review_path(@product)]
-/ 		%input[type:"submit", value:"Add Review"]
+	/ - if user_signed_in? && !left_review?
+	/ 	%form[action: new_product_review_path(@product)]
+	/ 		%input[type:"submit", value:"Add Review"]
