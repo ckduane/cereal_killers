@@ -8,6 +8,9 @@
 		%p= r.created_at.strftime("%b %-d %Y")
 		%p= r.rating
 		%p= r.comment
+		- if r.uploads.present?
+			- r.uploads.each do |u|
+				= image_tag(u)
 - else
 	%p This cereal currently has no reviews.
 
