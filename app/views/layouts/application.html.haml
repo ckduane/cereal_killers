@@ -4,16 +4,16 @@
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %title Cereal Killer
     = csrf_meta_tags
-    = stylesheet_link_tag "https://fonts.googleapis.com/css2?family=Special+Elite&display=swap"
+    = stylesheet_link_tag "https://fonts.googleapis.com/css2?family=Creepster&family=Special+Elite&display=swap"
     = stylesheet_link_tag "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     = stylesheet_link_tag "application", media: 'all'
   %body
     - if notice.present?
-      %p.notice= notice
+      %p.alert.alert-success= notice
     - if alert.present?
-      %p.alert= alert
-    = link_to "Cereal Killers", root_path, class: "nav-link"
+      %p.alert.alert-danger= alert
     %nav.nav
+      = link_to "Cereal Killers", root_path, class: "nav-link"
       = link_to "View Cereals", products_path, class: "nav-link"
 
       - if user_signed_in?
@@ -21,9 +21,7 @@
         = link_to "Account", current_user, class: "nav-link"
         = link_to "Log Out", destroy_user_session_path,:method => :delete, class: "nav-link"
       - else
-        = link_to new_user_registration_path do
-          %li Register
-        = link_to new_user_session_path do
-          %li Log In
+        = link_to "Register", new_user_registration_path, class: "nav-link"
+        = link_to "Log In", new_user_session_path, class: "nav-link"
 
   = yield
