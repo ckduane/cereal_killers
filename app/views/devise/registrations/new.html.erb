@@ -5,7 +5,7 @@
     <%= render "devise/shared/error_messages", resource: resource %>
 
     <div class="field form-group">
-      <%= f.label :avatar %><br />
+      <%= f.label :upload_avatar %><br />
       <%= f.file_field :avatar, accept: 'image/png,image/gif,image/jpeg', class: "form-control-file" %>
     </div>
 
@@ -22,7 +22,7 @@
     <div class="field form-group">
       <%= f.label :password %>
       <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <small class="form-text text-muted"><%= @minimum_password_length %> characters minimum</small>
       <% end %><br />
       <%= f.password_field :password, autocomplete: "new-password", class: "form-control" %>
     </div>
