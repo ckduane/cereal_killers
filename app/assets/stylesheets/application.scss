@@ -16,17 +16,22 @@
  */
 
 $c-yellow: #ffc40099;
-$c-black: #000;
+$c-black: #222;
 $c-red: #fd2020;
 
 $f-primary: 'Special Elite', serif;
+$f-secondary: 'Creepster', cursive;
 
 
 body {
-	color: #222;
+	color: $c-black;
 	font-family: $f-primary;
 	line-height: 1.5;
 	margin: 0;
+}
+
+h2 {
+	font-family: $f-secondary;
 }
 
 a {
@@ -37,7 +42,10 @@ a {
 	}
 }
 nav {
-	background: $c-yellow;
+	background: $c-black;
+	a {
+		color: white;
+	}
 }
 
 .bg-img {
