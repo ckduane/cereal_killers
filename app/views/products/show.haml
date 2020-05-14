@@ -2,12 +2,18 @@
 	%h2 #{@product.name}
 
 	- if has_reviews?
-		- @product.reviews.each do |r|
-			.container
-				%p= r.user.username
-				%p= r.created_at.strftime("%b %-d %Y")
-				%p= r.rating
-				%p= r.comment
+		.container-fluid
+			- @product.reviews.each do |r|
+				.row
+					.col
+						%p= link_to r.user.username, user_path
+					.col-9
+						.row
+							%p= r.rating
+							%p= r.created_at.strftime("%b %-d %Y")
+						.row
+							%p= r.comment
+		%hr
 	- else
 		%p This cereal currently has no reviews.
 

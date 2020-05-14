@@ -6,8 +6,11 @@
 
 	- if !@user.reviews.empty?
 		%h3 Reviews
-		- @user.reviews.each do |r|
-			.container-sm
-				%h4= r.product.name
-				%p= r.rating
-				%p= r.comment
+		.container-fluid
+			- @user.reviews.each do |r|
+				.row
+					.col
+						%p= link_to r.product.name, product_path(r.product.id)
+					.col-9
+						%p= r.rating
+						%p= r.comment
