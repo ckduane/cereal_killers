@@ -17,7 +17,7 @@
 						.row
 							.col
 								%p= r.comment
-				- if r.uploads.present?
+				- if r.uplo ads.attached?
 					.row
 						- r.uploads.each do |u|
 							= image_tag(u)

@@ -25,7 +25,7 @@ class ProductsController < ApplicationController
 				product_id: @product.id,
 				rating: params[:product]["reviews_attributes"]["0"]["rating"],
 				comment: params[:product]["reviews_attributes"]["0"]["comment"],
-				uploads: params[:product]["reviews_attributes"]["0"]["uploads"]
+				uploads: params[:product]["reviews_attributes"]["0"][:uploads => []]
 				)
 			redirect_to product_path(@product)
 		else
@@ -37,7 +37,7 @@ class ProductsController < ApplicationController
 	private
 
 	def product_params
-		params.require(:product).permit(:name, :reviews_attributes)
+		params.require(:product).permit(:name, :reviews => [:rating, :comment, :uploads => []])
 	end
 
 end
