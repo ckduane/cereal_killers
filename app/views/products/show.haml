@@ -17,8 +17,8 @@
 						.row
 							.col
 								%p= r.comment
-				.row
-					- if r.uploads.present?
+				- if r.uploads.present?
+					.row
 						- r.uploads.each do |u|
 							= image_tag(u)
 	- else

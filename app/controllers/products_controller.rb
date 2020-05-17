@@ -24,7 +24,8 @@ class ProductsController < ApplicationController
 				user_id: current_user.id,
 				product_id: @product.id,
 				rating: params[:product]["reviews_attributes"]["0"]["rating"],
-				comment: params[:product]["reviews_attributes"]["0"]["comment"]
+				comment: params[:product]["reviews_attributes"]["0"]["comment"],
+				uploads: params[:product]["reviews_attributes"]["0"]["uploads"]
 				)
 			redirect_to product_path(@product)
 		else
