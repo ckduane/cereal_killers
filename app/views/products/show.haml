@@ -5,17 +5,25 @@
 		.container-fluid
 			- @product.reviews.each do |r|
 				.row
-					.col
+					.col-3
 						%p= link_to r.user.username, user_path
+						- if r.user.avatar.present?
+							= image_tag(r.user.thumbnail, class:"img-fluid")
 					.col-9
 						.row
-							%p= r.rating
-							%p= r.created_at.strftime("%b %-d %Y")
+							.col
+								%p= r.rating
+								%p= r.created_at.strftime("%b %-d %Y")
 						.row
-							%p= r.comment
-		%hr
+							.col
+								%p= r.comment
 	- else
 		%p This cereal currently has no reviews.
+
+	- if @product.uploads.attached?
+		.row
+			- @product.uploads.each do |u|
+				= image_tag(u)
 
 	/ - if user_signed_in? && !left_review?
 	/ 	%form[action: new_product_review_path(@product)]

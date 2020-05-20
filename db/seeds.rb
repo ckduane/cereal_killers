@@ -8,7 +8,7 @@
 
 products = Product.create([
 	{ name: 'Frooty Pubbles' },
-	{ name: 'Cinammon Toast Crunch' },
+	{ name: 'Cinnamon Toast Crunch' },
 	{ name: "Reese's Puffs" },
 	{ name: 'Cookie Crisp' }
 ])
