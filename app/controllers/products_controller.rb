@@ -19,25 +19,19 @@ class ProductsController < ApplicationController
 
 	def create
 		@product = Product.find_or_initialize_by(name: params[:product][:name])
+		@product.uploads.attach(params[:product][:uploads])
 		if @product.save
 			@product.reviews.create(
 				user_id: current_user.id,
 				product_id: @product.id,
 				rating: params[:product]["reviews_attributes"]["0"]["rating"],
 				comment: params[:product]["reviews_attributes"]["0"]["comment"],
-				uploads: params[:product]["reviews_attributes"]["0"][:uploads => []]
-				)
+			)
 			redirect_to product_path(@product)
 		else
 			@errors = @product.errors.full_messages
 			render :new
 		end
-	end
-
-	private
-
-	def product_params
-		params.require(:product).permit(:name, :reviews => [:rating, :comment, :uploads => []])
 	end
 
 end

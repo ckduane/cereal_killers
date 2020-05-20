@@ -17,12 +17,13 @@
 						.row
 							.col
 								%p= r.comment
-				- if r.uplo ads.attached?
-					.row
-						- r.uploads.each do |u|
-							= image_tag(u)
 	- else
 		%p This cereal currently has no reviews.
+
+	- if @product.uploads.attached?
+		.row
+			- @product.uploads.each do |u|
+				= image_tag(u)
 
 	/ - if user_signed_in? && !left_review?
 	/ 	%form[action: new_product_review_path(@product)]
