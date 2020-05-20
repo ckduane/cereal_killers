@@ -1,6 +1,11 @@
 .container-fluid
 	%h2 #{@product.name}
 
+	- if @product.uploads.attached?
+		.row
+			- @product.uploads.each do |u|
+				= image_tag(u.variant(resize: '300x300!').processed)
+
 	- if has_reviews?
 		.container-fluid
 			- @product.reviews.each do |r|
@@ -20,10 +25,6 @@
 	- else
 		%p This cereal currently has no reviews.
 
-	- if @product.uploads.attached?
-		.row
-			- @product.uploads.each do |u|
-				= image_tag(u)
 
 	/ - if user_signed_in? && !left_review?
 	/ 	%form[action: new_product_review_path(@product)]

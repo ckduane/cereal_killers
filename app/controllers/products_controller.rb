@@ -16,7 +16,6 @@ class ProductsController < ApplicationController
 		@product.reviews.build
 	end
 
-
 	def create
 		@product = Product.find_or_initialize_by(name: params[:product][:name])
 		@product.uploads.attach(params[:product][:uploads])
