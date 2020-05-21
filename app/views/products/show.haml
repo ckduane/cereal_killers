@@ -1,6 +1,10 @@
 .container-fluid
 	%h2 #{@product.name}
 
+	- if has_reviews?
+		= rating_average(@product.reviews)
+		%p #{@product.reviews.length} reviews
+
 	- if @product.uploads.attached?
 		.row
 			- @product.uploads.each do |u|
