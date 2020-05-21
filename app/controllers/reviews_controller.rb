@@ -42,8 +42,10 @@ class ReviewsController < ApplicationController
     end
   end
 
+  private
+
   def review_params
-		params.require(:review).permit(:user_id, :product_id, :rating, :comment, uploads: [])
+		params.require(:review).permit(:user_id, :product_id, :rating, :comment)
 	end
 
 	def find_product
