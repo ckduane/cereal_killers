@@ -33,4 +33,14 @@ class ProductsController < ApplicationController
 		end
 	end
 
+	private
+
+	def find_product
+		@product = Product.find_by(id: params[:product_id])
+	end
+
+	def find_review
+		@review = Review.find_by(id: params[:id])
+	end
+
 end

@@ -1,17 +1,15 @@
 = form_for [@product, @review] do |f|
+	.form-group
+		= f.label :rating
+		.radio-buttons
+			= f.radio_button :rating, 1
+			= f.radio_button :rating, 2
+			= f.radio_button :rating, 3
+			= f.radio_button :rating, 4
+			= f.radio_button :rating, 5
 
 	.form-group
-		.form-check-label= f.label :product_name
-		= f.text_field :product
+		= f.label :comment
+		= f.text_area :comment, size: "30x10", required: true, class: "form-control"
 
-		.form-check-label= f.label :rating
-		= f.radio_button :rating, 1
-		= f.radio_button :rating, 2
-		= f.radio_button :rating, 3
-		= f.radio_button :rating, 4
-		= f.radio_button :rating, 5
-
-		.form-check-label= f.label :comment
-		= f.text_area :comment, size: "30x10"
-
-		= f.submit
+		= f.submit "Submit", class: "btn btn-primary"

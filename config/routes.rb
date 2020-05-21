@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'home#index'
 
   resources :products do
-  	:reviews
+  	resources :reviews
   end
 
   devise_for :users, controllers: {
