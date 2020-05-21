@@ -26,6 +26,6 @@
 		%p This cereal currently has no reviews.
 
 
-	/ - if user_signed_in? && !left_review?
-	/ 	%form[action: new_product_review_path(@product)]
-	/ 		%input[type:"submit", value:"Add Review"]
+	- if user_signed_in? && !left_review?
+		%form[action: new_product_review_path(@product)]
+			%input[type:"submit", value:"Add Review"]
