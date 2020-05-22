@@ -18,7 +18,13 @@ class User < ApplicationRecord
 	end
 
   def thumbnail
-    return self.avatar.variant(resize: '300x300')
+    if avatar.attached?
+      return self.avatar.variant(resize: '300x300')
+    else
+      avatar.attach(
+        io: File.open('app/assets/images/avatar.png'), filename: 'avatar.png'
+      )
+    end
   end
 
 end
