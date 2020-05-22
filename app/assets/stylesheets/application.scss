@@ -34,6 +34,10 @@ h1, h2 {
 	font-family: $f-secondary;
 }
 
+p {
+	white-space: pre-wrap;
+}
+
 a {
 	color: $c-black;
 	&:hover, &:focus {
