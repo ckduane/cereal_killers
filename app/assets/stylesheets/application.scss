@@ -22,16 +22,21 @@ $c-red: #fd2020;
 $f-primary: 'Special Elite', serif;
 $f-secondary: 'Creepster', cursive;
 
+html {
+	font-size: 62.5%;
+}
 
 body {
 	color: $c-black;
 	font-family: $f-primary;
+	font-size: 1.6rem;
 	line-height: 1.5;
 	margin: 0;
 }
 
 h1, h2 {
 	font-family: $f-secondary;
+	font-size: 4rem;
 }
 
 a {
@@ -41,11 +46,17 @@ a {
 		text-decoration: none;
 	}
 }
-nav {
+nav, footer {
 	background: $c-black;
 	a {
 		color: white;
 	}
+}
+
+footer {
+	color: white;
+	padding: 1rem;
+	text-orientation: text-center;
 }
 
 .bg-img {
