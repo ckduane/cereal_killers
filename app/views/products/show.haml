@@ -2,8 +2,11 @@
 	%h1 #{@product.name}
 
 	- if has_reviews?
-		= rating_average(@product.reviews)
-		%p #{@product.reviews.length} reviews
+		- rating_average(@product.reviews).round.times do
+			= image_tag('butcher.svg', class: 'svg')
+		- (5 - rating_average(@product.reviews).round).times do
+			= image_tag('butcher_blank.svg', class: 'svg')
+		%span #{@product.reviews.length} reviews
 	- else
 		%p This cereal currently has no reviews.
 
