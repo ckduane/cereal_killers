@@ -7,7 +7,7 @@
 	.form-group
 		= f.fields_for :reviews do |r|
 			= r.label :rating
-			.radio-buttons
+			.star-rating
 				= r.radio_button :rating, 1
 				= r.radio_button :rating, 2
 				= r.radio_button :rating, 3

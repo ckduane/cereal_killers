@@ -1,12 +1,17 @@
 = form_for [@product, @review] do |f|
 	.form-group
 		= f.label :rating
-		.radio-buttons
+		.star-rating
 			= f.radio_button :rating, 1
+			%i
 			= f.radio_button :rating, 2
+			%i
 			= f.radio_button :rating, 3
+			%i
 			= f.radio_button :rating, 4
+			%i
 			= f.radio_button :rating, 5
+			%i
 
 	.form-group
 		= f.label :comment
