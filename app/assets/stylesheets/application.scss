@@ -18,6 +18,7 @@
 $c-yellow: #ffc40099;
 $c-black: #222;
 $c-red: #fd2020;
+$c-dark-red: #a00202;
 
 $f-primary: 'Special Elite', serif;
 $f-secondary: 'Creepster', cursive;
@@ -45,6 +46,9 @@ p {
 
 a {
 	color: $c-black;
+	&.btn {
+		font-size: 1.6rem;
+	}
 	&:hover, &:focus {
 		color: $c-red;
 		text-decoration: none;
@@ -65,12 +69,27 @@ footer {
 
 .bg-img {
 	position: relative;
+	height: 30rem;
 	img {
 		position: absolute;
 		width: 100%;
 	}
 }
 
-.svg {
-	height: 5rem;
+.btn {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+.btn-primary {
+	background-color: $c-dark-red;
+	border-color: $c-dark-red;
+	&:hover,
+	&:focus,
+	&:not(:disabled):not(.disabled).active, 
+	&:not(:disabled):not(.disabled):active, 
+	.show>&.dropdown-toggle {
+		background-color: darken($c-dark-red, 10%);
+		border-color: darken($c-dark-red, 10%);
+	}
 }
