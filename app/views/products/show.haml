@@ -1,10 +1,10 @@
 .container-fluid
+	%h1 #{@product.name}
+
 	- if @product.uploads.attached?
 		.row.slider
 			- @product.uploads.each do |u|
 				= image_tag(u.variant(resize: '300!x200').processed)
-
-	%h1 #{@product.name}
 
 	- if has_reviews?
 		- rating_average(@product.reviews).round.times do
@@ -16,7 +16,7 @@
 		%p This cereal currently has no reviews.
 
 	- if user_signed_in? && !left_review?
-		%div= link_to "Add Review", new_product_review_path(@product), class: "btn btn-primary"
+		%div= link_to "Write a Review", new_product_review_path(@product), class: "btn btn-primary"
 
 
 	- if has_reviews?

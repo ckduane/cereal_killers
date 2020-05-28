@@ -76,10 +76,19 @@ footer {
 	}
 }
 
+.btn {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
 .btn-primary {
 	background-color: $c-dark-red;
 	border-color: $c-dark-red;
-	&:hover, &:focus {
+	&:hover,
+	&:focus,
+	&:not(:disabled):not(.disabled).active, 
+	&:not(:disabled):not(.disabled):active, 
+	.show>&.dropdown-toggle {
 		background-color: darken($c-dark-red, 10%);
 		border-color: darken($c-dark-red, 10%);
 	}
