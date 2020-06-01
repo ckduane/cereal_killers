@@ -14,14 +14,7 @@
  *= require_self
 
  */
-
-$c-yellow: #ffc40099;
-$c-black: #222;
-$c-red: #fd2020;
-$c-dark-red: #a00202;
-
-$f-primary: 'Special Elite', serif;
-$f-secondary: 'Creepster', cursive;
+@import 'variables';
 
 html {
 	font-size: 62.5%;
