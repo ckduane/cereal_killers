@@ -58,4 +58,3 @@ gem 'devise'
 gem "autoprefixer-rails"
 gem "google-cloud-storage", "~> 1.8", require: false
 gem 'mini_magick'
-gem 'puma'
