@@ -6,7 +6,7 @@
   height: 5rem;
   overflow: hidden;
   position: relative;
-  background: url('butcher_blank.svg');
+  background: image-url('butcher_blank.svg');
   background-size: contain;
 }
 .star-rating i {
@@ -17,7 +17,7 @@
   height: 100%;
   width: 20%;
   z-index: 1;
-  background: url('butcher.svg');
+  background: image-url('butcher.svg');
   background-size: contain;
 }
 .star-rating input {
