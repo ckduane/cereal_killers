@@ -21,8 +21,10 @@
 
 	- if has_reviews?
 		.container-fluid
+			.row
+				%h2 Reviews
 			- @product.reviews.each do |r|
-				.row
+				.row.reviews
 					.col-3
 						%p= link_to r.user.username, user_path
 						- if r.user.avatar.present?
@@ -30,10 +32,10 @@
 					.col-9
 						.row
 							.col
+								%div= r.created_at.strftime("%m/%d/%Y")
 								= image_tag("#{r.rating}star.png")
-								%p= r.created_at.strftime("%b %-d %Y")
 						.row
-							.col
+							.col.comment
 								%p= r.comment
 				- if user_signed_in? && owns_review?(r)
 					= link_to "Edit", edit_product_review_path(@product, r), class: "btn btn-primary"

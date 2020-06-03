@@ -28,25 +28,6 @@ body {
 	margin: 0;
 }
 
-h1, h2 {
-	font-family: $f-secondary;
-	font-size: 4rem;
-}
-
-p {
-	white-space: pre-wrap;
-}
-
-a {
-	color: $c-black;
-	&.btn {
-		font-size: 1.6rem;
-	}
-	&:hover, &:focus {
-		color: $c-red;
-		text-decoration: none;
-	}
-}
 nav, footer {
 	background: $c-black;
 	a {
@@ -86,3 +67,4 @@ footer {
 		border-color: darken($c-dark-red, 10%);
 	}
 }
+

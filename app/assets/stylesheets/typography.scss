@@ -1,0 +1,39 @@
+@import 'variables';
+
+h1, h2 {
+	font-family: $f-secondary;
+}
+
+h1 {
+	font-size: 4rem;
+}
+
+h2 {
+	font-size: 4rem;
+}
+p {
+	white-space: pre-wrap;
+}
+
+a {
+	color: $c-black;
+	&.btn {
+		font-size: 1.6rem;
+	}
+	&:hover, &:focus {
+		color: $c-red;
+		text-decoration: none;
+	}
+}
+
+@media screen and (min-width: 75em) {
+	h1, h2 {
+		letter-spacing: .2rem;
+	}
+		h1 {
+		font-size: 6.5rem;
+	}
+	h2 {
+		font-size: 5rem;
+	}
+}
