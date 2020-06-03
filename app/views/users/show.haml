@@ -1,16 +1,21 @@
 .container-fluid
-	%h2 #{@user.username}
-	- if @user.username == current_user.username
-		%p= link_to "Edit Account", edit_user_registration_path(@user.id)
+	%h1 #{@user.username}
 	= image_tag(@user.thumbnail)
+	- if @user.username == current_user.username
+		%p= link_to "Edit Account", edit_user_registration_path(@user.id), class: "btn btn-primary"
 
 	- if !@user.reviews.empty?
-		%h3 Reviews
 		.container-fluid
+			%h2 Reviews
 			- @user.reviews.each do |r|
-				.row
+				.row.reviews
 					.col
-						%p= link_to r.product.name, product_path(r.product.id)
+						%h3= link_to r.product.name, product_path(r.product.id)
+						- if r.product.uploads.attached?
+							= link_to(image_tag(r.product.uploads.first, class: 'img-thumbnail'), product_path(r.product.id))
+						- else
+							= link_to(image_tag('placeholder.jpg', class: 'img-thumbnail'), product_path(r.product.id))
 					.col-9
-						%p= r.rating
-						%p= r.comment
+						%div= r.created_at.strftime("%m/%d/%Y")
+						= image_tag("#{r.rating}star.png")
+						.comment= r.comment
