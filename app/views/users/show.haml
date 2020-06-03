@@ -13,6 +13,8 @@
 						%p= link_to r.product.name, product_path(r.product.id)
 						- if r.product.uploads.attached?
 							= link_to(image_tag(r.product.uploads.first, class: 'img-thumbnail'), product_path(r.product.id))
+						- else
+							= link_to(image_tag('placeholder.jpg', class: 'img-thumbnail'), product_path(r.product.id))
 					.col-9
 						%div= r.created_at.strftime("%m/%d/%Y")
 						= image_tag("#{r.rating}star.png")
