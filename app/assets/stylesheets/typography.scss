@@ -5,7 +5,7 @@ h1, h2 {
 }
 
 h1 {
-	font-size: 5rem;
+	font-size: 7rem;
 }
 
 h2 {
@@ -30,8 +30,21 @@ a {
 		text-decoration: none;
 	}
 }
+@media screen and (min-width: 40em) {
+	h1 {
+		font-size: 5rem;
+	}
 
-@media screen and (min-width: 75em) {
+	h2 {
+		font-size: 4rem;
+	}
+
+	h3 {
+		font-size: 2rem;
+	}
+}
+
+@media screen and (min-width: 64.062em) {
 	h1, h2 {
 		letter-spacing: .2rem;
 	}
