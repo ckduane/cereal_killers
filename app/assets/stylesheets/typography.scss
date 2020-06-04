@@ -5,15 +5,15 @@ h1, h2 {
 }
 
 h1 {
-	font-size: 7rem;
+	font-size: 5rem;
 }
 
 h2 {
-	font-size: 4rem;
+	font-size: 4.5rem;
 }
 
 h3 {
-	font-size: 2rem;
+	font-size: 1.8rem;
 }
 
 p {
@@ -30,21 +30,11 @@ a {
 		text-decoration: none;
 	}
 }
-@media screen and (min-width: 40em) {
-	h1 {
-		font-size: 5rem;
-	}
+@media screen and (min-width: 768px) {
 
-	h2 {
-		font-size: 4rem;
-	}
-
-	h3 {
-		font-size: 2rem;
-	}
 }
 
-@media screen and (min-width: 64.062em) {
+@media screen and (min-width: 1024px) {
 	h1, h2 {
 		letter-spacing: .2rem;
 	}
