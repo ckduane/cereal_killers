@@ -4,7 +4,6 @@ html {
 }
 
 body {
-	color: $c-black;
 	display: flex;
 	flex-direction: column;
 	font-family: $f-primary;
@@ -15,7 +14,7 @@ body {
 }
 
 nav, footer {
-	background: $c-black;
+	background: $gray-900;
 }
 
 nav {
@@ -25,13 +24,13 @@ nav {
 }
 
 footer {
-	color: $c-dark-gray;
+	color: $gray-700;
 	font-size: 1rem;
 	padding: 1rem;
 	text-orientation: text-center;
 	margin-top: auto;
 	a {
-		color: $c-dark-gray;
+		color: $gray-700;
 	}
 }
 
