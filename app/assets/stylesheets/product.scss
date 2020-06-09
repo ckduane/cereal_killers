@@ -1,13 +1,6 @@
-@import 'variables';
-
 .cereal-img {
 	padding-top: 1rem;
 	padding-bottom: 2rem;
-	&:hover {
-		a {
-			color: $c-red;
-		}
-	}
 	a {
 		display: block;
 	}
@@ -26,11 +19,11 @@
 	height: 5rem;
 }
 
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 768px) {
 
 }
 
-@media screen and (min-width: 75em) {
+@media screen and (min-width: 1024px) {
 	.svg {
 		height: 6rem;
 	}

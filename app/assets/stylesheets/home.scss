@@ -1,3 +1,63 @@
-.homepage-hero {
-	height: 10rem;
+html {
+	font-size: 62.5%;
+	height: 100%;
+}
+
+body {
+	color: $c-black;
+	display: flex;
+	flex-direction: column;
+	font-family: $f-primary;
+	font-size: 1.6rem;
+	height: 100%;
+	line-height: 1.5;
+	margin: 0;
+}
+
+nav, footer {
+	background: $c-black;
+}
+
+nav {
+	a {
+		color: white;
+	}
+}
+
+footer {
+	color: $c-dark-gray;
+	font-size: 1rem;
+	padding: 1rem;
+	text-orientation: text-center;
+	margin-top: auto;
+	a {
+		color: $c-dark-gray;
+	}
+}
+
+.bg-img {
+	position: relative;
+	height: 30rem;
+	img {
+		position: absolute;
+		width: 100%;
+	}
+}
+
+.btn {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+.btn-primary {
+	background-color: $c-dark-red;
+	border-color: $c-dark-red;
+	&:hover,
+	&:focus,
+	&:not(:disabled):not(.disabled).active, 
+	&:not(:disabled):not(.disabled):active, 
+	.show>&.dropdown-toggle {
+		background-color: darken($c-dark-red, 10%);
+		border-color: darken($c-dark-red, 10%);
+	}
 }
