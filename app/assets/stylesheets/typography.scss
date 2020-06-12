@@ -1,3 +1,13 @@
+@import "_variables";
+@import "bootstrap";
+
+body {
+	font-family: $f-primary;
+	font-size: 1.6rem;
+	line-height: 1.5;
+
+}
+
 h1, h2 {
 	font-family: $f-secondary;
 }
