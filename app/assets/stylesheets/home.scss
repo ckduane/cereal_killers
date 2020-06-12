@@ -1,3 +1,6 @@
+@import "_variables";
+@import "bootstrap";
+
 html {
 	font-size: 62.5%;
 	height: 100%;
@@ -6,10 +9,7 @@ html {
 body {
 	display: flex;
 	flex-direction: column;
-	font-family: $f-primary;
-	font-size: 1.6rem;
 	height: 100%;
-	line-height: 1.5;
 	margin: 0;
 }
 
