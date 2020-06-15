@@ -20,6 +20,9 @@ h2 {
 
 h3 {
 	font-size: 1.8rem;
+	a {
+		color: black;
+	}
 }
 
 p {
@@ -27,12 +30,14 @@ p {
 }
 
 a {
-	color: $gray-900;
+	color: $c-dark-red;
 	&.btn {
 		font-size: 1.6rem;
 	}
 	&:hover, &:focus {
+		color: $c-red;
 		text-decoration: none;
+		transition: $t-ease;
 	}
 }
 
