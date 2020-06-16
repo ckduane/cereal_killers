@@ -6,6 +6,10 @@
 			- @product.uploads.each do |u|
 				= image_tag(u.variant(resize: '300!x200').processed)
 
+	- if user_signed_in?
+		.row
+			=link_to "Add Photos", new_product_upload_path(@product), class: 'btn btn-primary'
+
 	- if has_reviews?
 		- rating_average(@product.reviews).round.times do
 			= image_tag('butcher.svg', class: 'svg')
