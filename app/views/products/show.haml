@@ -6,6 +6,17 @@
 			- @product.uploads.each do |u|
 				= image_tag(u.variant(resize: '300!x200').processed)
 
+	.container-fluid
+		.row
+			- if user_signed_in? && !left_review?
+				= link_to "Write a Review", new_product_review_path(@product), class: "btn btn-primary"
+
+			- if user_signed_in?
+				=link_to new_product_upload_path(@product), class: 'btn btn-secondary' do
+					=image_tag('camera.svg', class: "icon")
+					%span Add Photos
+
+
 	- if has_reviews?
 		- rating_average(@product.reviews).round.times do
 			= image_tag('butcher.svg', class: 'svg')
@@ -15,8 +26,6 @@
 	- else
 		%p This cereal currently has no reviews.
 
-	- if user_signed_in? && !left_review?
-		%div= link_to "Write a Review", new_product_review_path(@product), class: "btn btn-primary"
 
 
 	- if has_reviews?

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   resources :products do
   	resources :reviews
+  	resources :uploads
   end
 
   devise_for :users, controllers: {
