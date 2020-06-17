@@ -6,7 +6,6 @@
     %title Cereal Killer
     = csrf_meta_tags
     = stylesheet_link_tag "https://fonts.googleapis.com/css2?family=Creepster&family=Special+Elite&display=swap"
-    = stylesheet_link_tag "//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     = stylesheet_link_tag "application", media: 'all'
   %body
     - if notice.present?
@@ -25,9 +24,6 @@
       - else
         = link_to "Register", new_user_registration_path, class: "nav-link"
         = link_to "Log In", new_user_session_path, class: "nav-link"
-    = javascript_include_tag "https://code.jquery.com/jquery-1.12.4.min.js", integrity: "sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=", crossorigin: "anonymous"
-    = javascript_include_tag "//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
-    = javascript_include_tag 'application'
     
 
   = yield
@@ -37,3 +33,5 @@
     %a{ href: "https://www.flaticon.com/authors/catkuro" }catkuro
     %span from 
     %a{ href: "https://www.flaticon.com/" }www.flaticon.com
+
+  = javascript_include_tag 'application'
