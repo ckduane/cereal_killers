@@ -4,7 +4,7 @@
 	- if @product.uploads.attached?
 		.row.slider
 			- @product.uploads.each do |u|
-				= image_tag(u.variant(resize: '300!x200').processed)
+				= image_tag(u.variant(resize: '300x200').processed)
 
 	.container-fluid
 		.row
@@ -25,8 +25,6 @@
 		%span / #{@product.reviews.length} reviews
 	- else
 		%p This cereal currently has no reviews.
-
-
 
 	- if has_reviews?
 		.container-fluid
