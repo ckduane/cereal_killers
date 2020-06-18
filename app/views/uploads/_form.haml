@@ -2,7 +2,7 @@
 
 	.form-group
 		= f.label :upload_images
-		= f.file_field :uploads, multiple: true,  accept: 'image/png,image/gif,image/jpeg', class: "form-control-file"
+		= f.file_field :uploads, multiple: true,  accept: 'image/png,image/gif,image/jpeg', class: "form-control-file", id: "fileInput"
 		
 		%br
 		= f.submit "Submit", class: "btn btn-primary"
