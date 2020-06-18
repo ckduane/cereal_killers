@@ -1,15 +1,16 @@
 @import "_variables";
 
 .star-rating {
-  font-size: 0;
-  white-space: nowrap;
-  display: inline-block;
-  width: 25rem;
-  height: 5rem;
-  overflow: hidden;
-  position: relative;
   background: image-url('butcher_blank.svg');
   background-size: contain;
+  display: block;
+  position: relative;
+  width: 25rem;
+  height: 5rem;
+  font-size: 0;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  white-space: nowrap;
     i {
     opacity: 0;
     position: absolute;
