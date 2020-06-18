@@ -1,8 +1,16 @@
-.cereal-img {
+.cereal-img-container {
 	padding-top: 1rem;
 	padding-bottom: 2rem;
 	a {
 		display: block;
+	}
+	.cereal-img {
+		img {
+			width: 100%;
+		}
+	}
+	.star-img {
+		margin-bottom: 1rem;
 	}
 }
 
