@@ -6,7 +6,7 @@
 				%h3= link_to "#{p.name}", product_path(p.id)
 				= image_tag("#{rating_average(p.reviews).round}star.png", class: 'star-img')
 				- if p.uploads.attached?
-					.cereal-img= link_to(image_tag(p.uploads.first), product_path(p.id))
+					.cereal-img= link_to(image_tag(p.uploads.first.variant(resize: '300x300')), product_path(p.id))
 				- else
 					.cereal-img= link_to(image_tag('placeholder.jpg'), product_path(p.id))
 				
