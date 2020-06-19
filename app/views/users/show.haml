@@ -9,13 +9,13 @@
 			%h2 Reviews
 			- @user.reviews.each do |r|
 				.row.reviews.index-card
-					.col.text-center
+					.col-12.col-md-3.text-center
 						%h3= link_to r.product.name, product_path(r.product.id)
 						- if r.product.uploads.attached?
 							= link_to(image_tag(r.product.uploads.first.variant(resize: '200x200')), product_path(r.product.id))
 						- else
 							= link_to(image_tag('placeholder.jpg'), product_path(r.product.id))
-					.col-9
-						%div= r.created_at.strftime("%m/%d/%Y")
+					.col-12.col-md-9
+						%div= r.created_at.strftime("%b %d, %Y")
 						= image_tag("#{r.rating}star.png")
 						.comment= r.comment
