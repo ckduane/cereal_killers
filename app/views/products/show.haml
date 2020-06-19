@@ -2,7 +2,7 @@
 	%h1 #{@product.name}
 
 	- if @product.uploads.attached?
-		.row.slider
+		.row.slider.my-4
 			- @product.uploads.each do |u|
 				= image_tag(u.variant(resize: '300x200').processed)
 
@@ -13,7 +13,7 @@
 
 			- if user_signed_in?
 				=link_to new_product_upload_path(@product), class: 'btn btn-secondary' do
-					=image_tag('camera.svg', class: "icon")
+					=image_tag('camera.svg', class: "icon mt-n2")
 					%span Add Photos
 
 
@@ -29,9 +29,9 @@
 	- if has_reviews?
 		.container-fluid
 			.row
-				%h2 Reviews
+				%h2 Review
 			- @product.reviews.each do |r|
-				.row.reviews.index-card
+				.row.bg-white.shadow.mb-4.py-4
 					.col-3
 						%h3= link_to r.user.username, user_path
 						- if r.user.avatar.present?
