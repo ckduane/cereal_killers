@@ -1,12 +1,12 @@
 .container
-	%h1.text-center BAM! all of em cereals reviewed
+	%h1.text-center Your next cereal awaits
 	.row
 		- @products.each do |p|
-			.col-6.col-md-4.col-lg-3.cereal-img-container.text-center
-				%h3= link_to "#{p.name}", product_path(p.id)
-				= image_tag("#{rating_average(p.reviews).round}star.png", class: 'star-img')
-				- if p.uploads.attached?
-					.cereal-img= link_to(image_tag(p.uploads.first.variant(resize: '300x300')), product_path(p.id))
-				- else
-					.cereal-img= link_to(image_tag('placeholder.jpg'), product_path(p.id))
-				
+			.col-6.col-md-4.col-lg-3.text-center
+				.instax
+					- if p.uploads.attached?
+						.cereal-img= link_to(image_tag(p.uploads.first.variant(resize: '300x300')), product_path(p.id))
+					- else
+						.cereal-img= link_to(image_tag('placeholder.jpg'), product_path(p.id))
+					= image_tag("#{rating_average(p.reviews).round}star.png", class: 'star-img')
+					%h3= link_to "#{p.name}", product_path(p.id)

@@ -1,20 +1,25 @@
-.cereal-img-container {
-	padding-top: 1rem;
-	padding-bottom: 2rem;
-	.cereal-img {
-		padding-bottom: 100%;
-		position: relative;
-		img {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-		}
+.cereal-img {
+	padding-bottom: 100%;
+	position: relative;
+	img {
+		position:absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
 	}
-	.star-img {
-		margin-bottom: 1rem;
-	}
+}
+.star-img {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+.instax {
+	background: white;
+	box-shadow: 0.3rem 0.3rem 0.5rem 0rem rgba(0,0,0,0.25);
+	padding: 1rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 }
 
 .icon {
