@@ -1,67 +1,5 @@
 @import "_variables";
 
-.star-rating {
-  background: image-url('butcher_blank.svg');
-  background-size: contain;
-  display: block;
-  position: relative;
-  width: 25rem;
-  height: 5rem;
-  font-size: 0;
-  margin-bottom: 1rem;
-  overflow: hidden;
-  white-space: nowrap;
-    i {
-    opacity: 0;
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 20%;
-    z-index: 1;
-    background: image-url('butcher.svg');
-    background-size: contain;
-  }
-  input {
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    opacity: 0;
-    display: inline-block;
-    width: 20%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    z-index: 2;
-    position: relative;
-    &:hover + i,
-    &:checked + i {
-      opacity: 1;
-    }
-  }
-  i ~ i {
-    width: 40%;
-  }
-  i ~ i ~ i {
-    width: 60%;
-  }
-  i ~ i ~ i ~ i {
-    width: 80%;
-  }
-  i ~ i ~ i ~ i ~ i {
-    width: 100%;
-  }
-}
-
-::after,
-::before {
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  text-align: center;
-  vertical-align: middle;
-}
-
 .reviews {
   border-bottom: 0.1rem solid $gray-300;
   padding-top: 2rem;
@@ -82,5 +20,4 @@
     padding-top: 4rem;
     padding-bottom: 4rem;
   }
-
 }
