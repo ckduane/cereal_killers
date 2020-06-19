@@ -15,3 +15,19 @@ $primary: $c-red !default;
 $gray-900: #2A2222;
 $gray-700: #564848;
 $gray-300: #E7DFE0;
+
+.text-gray-900 {
+	color: $gray-900;
+}
+
+.text-gray-700 {
+	color: $gray-700;
+}
+
+.bg-gray-300 {
+	background-color: $gray-300;
+}
+
+.bg-gray-900 {
+	background-color: $gray-900;
+}
