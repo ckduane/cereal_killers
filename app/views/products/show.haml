@@ -31,7 +31,7 @@
 			.row
 				%h2 Reviews
 			- @product.reviews.each do |r|
-				.row.reviews
+				.row.reviews.index-card
 					.col-3
 						%h3= link_to r.user.username, user_path
 						- if r.user.avatar.present?

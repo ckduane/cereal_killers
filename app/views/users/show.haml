@@ -9,12 +9,13 @@
 			%h2 Reviews
 			- @user.reviews.each do |r|
 				.row.reviews
-					.col
-						%h3= link_to r.product.name, product_path(r.product.id)
-						- if r.product.uploads.attached?
-							= link_to(image_tag(r.product.uploads.first.variant(resize: '200x200'), class: 'img-thumbnail'), product_path(r.product.id))
-						- else
-							= link_to(image_tag('placeholder.jpg', class: 'img-thumbnail'), product_path(r.product.id))
+					.col.text-center
+						.instax
+							- if r.product.uploads.attached?
+								= link_to(image_tag(r.product.uploads.first.variant(resize: '200x200')), product_path(r.product.id))
+							- else
+								= link_to(image_tag('placeholder.jpg'), product_path(r.product.id))
+							%h3= link_to r.product.name, product_path(r.product.id)
 					.col-9
 						%div= r.created_at.strftime("%m/%d/%Y")
 						= image_tag("#{r.rating}star.png")

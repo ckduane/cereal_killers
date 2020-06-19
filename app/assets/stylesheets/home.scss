@@ -6,6 +6,7 @@ html {
 }
 
 body {
+	background-color: $gray-300;
 	color: $gray-900;
 	display: flex;
 	flex-direction: column;
@@ -35,32 +36,5 @@ footer {
 	margin-top: auto;
 	a {
 		color: $gray-700;
-	}
-}
-
-.bg-img {
-	position: relative;
-	height: 30rem;
-	img {
-		position: absolute;
-		width: 100%;
-	}
-}
-
-.btn {
-	margin-top: 1rem;
-	margin-bottom: 1rem;
-}
-
-.btn-primary {
-	background-color: $c-dark-red;
-	border-color: $c-dark-red;
-	&:hover,
-	&:focus,
-	&:not(:disabled):not(.disabled).active, 
-	&:not(:disabled):not(.disabled):active, 
-	.show>&.dropdown-toggle {
-		background-color: darken($c-dark-red, 10%);
-		border-color: darken($c-dark-red, 10%);
 	}
 }
