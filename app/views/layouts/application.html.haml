@@ -7,14 +7,14 @@
     = csrf_meta_tags
     = stylesheet_link_tag "https://fonts.googleapis.com/css2?family=Creepster&family=Special+Elite&display=swap"
     = stylesheet_link_tag "application", media: 'all'
-  %body
+  %body.bg-gray-300.text-gray-900.display-flex.flex-column.h-100.m-0
     - if notice.present?
       %p.alert.alert-success= notice
     - if alert.present?
       %p.alert.alert-danger= alert
     - if @errors.present?
       %p.alert.alert-danger= @errors
-    %nav.nav
+    %nav.nav.bg-gray-900
       = link_to "Cereal Killers", root_path, class: "nav-link"
 
       - if user_signed_in?
@@ -28,10 +28,10 @@
 
   = yield
 
-  %footer.text-center
+  %footer.text-center.bg-gray-900.text-gray-700.p-3.mt-auto
     %span icon made by 
-    %a{ href: "https://www.flaticon.com/authors/catkuro" }catkuro
+    %a.text-gray-700{ href: "https://www.flaticon.com/authors/catkuro" }catkuro
     %span from 
-    %a{ href: "https://www.flaticon.com/" }www.flaticon.com
+    %a.text-gray-700{ href: "https://www.flaticon.com/" }www.flaticon.com
 
   = javascript_include_tag 'application'

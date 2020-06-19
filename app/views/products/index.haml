@@ -9,4 +9,4 @@
 					- else
 						.cereal-img.position-relative= link_to(image_tag('placeholder.jpg', class: "position-absolute w-100 h-100"), product_path(p.id))
 					= image_tag("#{rating_average(p.reviews).round}star.png", class: 'my-3')
-					%h3= link_to "#{p.name}", product_path(p.id)
+					= link_to "#{p.name}", product_path(p.id), class: "stretched-link d-block text-gray-900"

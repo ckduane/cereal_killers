@@ -2,7 +2,7 @@
 	%h1 #{@user.username}
 	= image_tag(@user.thumbnail)
 	- if user_signed_in? && @user.username == current_user.username
-		%p= link_to "Edit Account", edit_user_registration_path(@user.id), class: "btn btn-primary"
+		%p= link_to "Edit Account", edit_user_registration_path(@user.id), class: "btn btn-primary my-3"
 
 	- if !@user.reviews.empty?
 		.container-fluid
@@ -12,9 +12,9 @@
 					.col-12.col-md-3.text-center
 						%h3= link_to r.product.name, product_path(r.product.id)
 						- if r.product.uploads.attached?
-							= link_to(image_tag(r.product.uploads.first.variant(resize: '200x200')), product_path(r.product.id))
+							= link_to(image_tag(r.product.uploads.first.variant(resize: '200x200'), class: "w-100"), product_path(r.product.id))
 						- else
-							= link_to(image_tag('placeholder.jpg'), product_path(r.product.id))
+							= link_to(image_tag('placeholder.jpg', class: "w-100"), product_path(r.product.id))
 					.col-12.col-md-9
 						%div= r.created_at.strftime("%b %d, %Y")
 						= image_tag("#{r.rating}star.png", class: "my-3")
