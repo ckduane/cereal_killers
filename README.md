@@ -1,24 +1,25 @@
-# README
+# CerealKillers
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rails 6 app for reviewing and rating cereals with a serial killer theme
 
-Things you may want to cover:
+## Technologies
 
-* Ruby version
+* Rails 6
 
-* System dependencies
+* Ruby 2.6.5
 
-* Configuration
+* PostgreSQL
 
-* Database creation
+* AWS S3
 
-* Database initialization
+* Bootstrap 4.5
 
-* How to run the test suite
+## Installation
 
-* Services (job queues, cache servers, search engines, etc.)
+`bundle install`
 
-* Deployment instructions
+`rake db:create`
 
-* ...
+`rake db:migrate`
+
+`rails s`
