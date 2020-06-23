@@ -1,15 +1,11 @@
 one:
-  product_id: 1
   name: Cookie Crisp
 
 two:
-  product_id: 2
   name: Reese's Puffs
 
 three:
-  product_id: 3
   name: Lucky Charms
 
 four:
-  product_id: 4
   name: Cap'n Crunch's Crunch Berries

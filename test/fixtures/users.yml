@@ -1,4 +1,5 @@
-one:
-  user_id: 1
-  username: test_user
-  email: test@test.com
+<% 10.times do |n| %>
+user_<%= n %>:
+  username: <%= "user#{n}" %>
+  email: <%= "user#{n}@example.com" %>
+<% end %>
