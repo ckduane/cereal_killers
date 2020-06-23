@@ -15,4 +15,17 @@ class UsersTest < ApplicationSystemTestCase
 
   	assert_text "Welcome! You have signed up successfully."
   end
+
+  test "should not log in" do
+		visit products_path
+
+  	click_on "Log In"
+
+  	fill_in "Email", with: "incorrect_email@test.com"
+  	fill_in "Password", with: "incorrectpassword"
+
+  	click_on "Log in"
+
+  	assert_text "Invalid Email or password"
+  end
 end
