@@ -9,7 +9,7 @@
 	.container-fluid
 		.row
 			- if user_signed_in? && !left_review?
-				= link_to "Write a Review", new_product_review_path(@product), class: "btn btn-primary my-3"
+				= link_to "Write a Review", new_product_review_path(@product), class: "btn btn-primary my-3 mr-3"
 
 			- if user_signed_in?
 				=link_to new_product_upload_path(@product), class: 'btn btn-secondary my-3' do
