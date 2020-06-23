@@ -7,7 +7,7 @@
     = csrf_meta_tags
     = stylesheet_link_tag "https://fonts.googleapis.com/css2?family=Creepster&family=Special+Elite&display=swap"
     = stylesheet_link_tag "application", media: 'all'
-  %body.bg-gray-300.text-gray-900.display-flex.flex-column.h-100.m-0
+  %body.bg-gray-300.text-gray-900.d-flex.flex-column.h-100.m-0
     - if notice.present?
       %p.alert.alert-success= notice
     - if alert.present?
