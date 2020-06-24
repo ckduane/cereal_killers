@@ -1,13 +1,29 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
 one:
   user_id: 1
-  brand_id: 1
+  product: Cookie Crisp
   rating: 1
-  comment: MyText
+  comment: Disappointed because there were no cookies and they weren't crispy...
 
 two:
   user_id: 1
-  brand_id: 1
-  rating: 1
-  comment: MyText
+  product: Reese's Puffs
+  rating: 3
+  comment: Reese's Puffs are nothing like Resse's at all, but they still held the chocolately, peanut buttery taste I expected
+
+three:
+  user_id: 1
+  product: Lucky Charms
+  rating: 4
+  comment: Yes! Marshmallows melt in your mouth, the crunchy kibbles are sugar coated goodness!
+
+four:
+  user_id: 2
+  product: Cookie Crisp
+  rating: 2
+  comment: Kinda tastes like cardboard, but its sugary and my brain wants to believe they're cookies, so..
+
+five:
+  user_id: 2
+  product: Reese's Puffs
+  rating: 5
+  comment: My favorite cereal!
