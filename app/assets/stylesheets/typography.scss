@@ -24,6 +24,9 @@ h3 {
 	a {
 		color: black;
 	}
+	&.responsive-font {
+		font-size: 2vw;
+	}
 }
 
 p {
@@ -52,7 +55,7 @@ a {
 	h2 {
 		font-size: 5rem;
 	}
-	h3 {
-		font-size: 2.5rem;
+	h3.responsive-font {
+		font-size: 1.75rem;
 	}
 }
