@@ -24,6 +24,7 @@ class User < ApplicationRecord
       avatar.attach(
         io: File.open('app/assets/images/avatar.png'), filename: 'avatar.png'
       )
+      return self.avatar.filename.to_s
     end
   end
 
