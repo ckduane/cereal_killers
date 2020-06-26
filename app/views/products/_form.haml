@@ -21,11 +21,11 @@
 
 			.form-group
 				= r.label :review
-				= r.text_area :comment, size: "30x10", required: true, class: "form-control"
+				= r.rich_text_area :comment, required: true
 
 	.form-group
 		= f.label :upload_images
 		= f.file_field :uploads, multiple: true,  accept: 'image/png,image/gif,image/jpeg', class: "form-control-file", id: 'fileInput'
 		
 		%br
-		= f.submit "Submit", class: "btn btn-primary mt-5"
+		= f.submit "Submit", class: "btn btn-primary mt-4"
