@@ -11,7 +11,7 @@
 			- @user.reviews.each do |r|
 				.row.bg-white.shadow.mb-5.py-4
 					.col-3
-						%h3.responsive-font= link_to r.product.name, product_path(r.product.id)
+						%h3.responsive-font= link_to r.product.name, product_path(r.product.id), class: 'stretched-link'
 						- if r.product.uploads.attached?
 							= link_to(image_tag(r.product.uploads.first.variant(resize: '200x200'), class: "w-100 rounded"), product_path(r.product.id))
 						- else
