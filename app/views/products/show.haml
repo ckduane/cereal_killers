@@ -33,7 +33,7 @@
 			- @product.reviews.each do |r|
 				.row.bg-white.shadow.mb-4.py-4
 					.col-3
-						%h3.responsive-font= link_to r.user.username, user_path, class: 'stretched-link'
+						%h3.responsive-font= link_to r.user.username, user_path(r.user.id), class: 'stretched-link'
 						- if r.user.avatar.present?
 							= image_tag(r.user.thumbnail, class:"img-fluid rounded")
 					.col-9
