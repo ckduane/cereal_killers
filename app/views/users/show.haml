@@ -1,7 +1,7 @@
 .container-fluid
 	%h1.text-center.text-md-left #{@user.username}
 
-	= image_tag(@user.thumbnail, class: 'd-flex m-auto d-md-block m-md-0')
+	= image_tag(@user.thumbnail, class: 'd-flex m-auto d-md-block m-md-0 rounded')
 	- if user_signed_in? && @user.username == current_user.username
 		%p= link_to "Edit Account", edit_user_registration_path(@user.id), class: "btn btn-primary my-3"
 
@@ -10,13 +10,13 @@
 			%h2 Reviews
 			- @user.reviews.each do |r|
 				.row.bg-white.shadow.mb-5.py-4
-					.col-12.col-md-3.text-md-center
-						%h3= link_to r.product.name, product_path(r.product.id)
+					.col-3
+						%h3.responsive-font= link_to r.product.name, product_path(r.product.id), class: 'stretched-link'
 						- if r.product.uploads.attached?
-							= link_to(image_tag(r.product.uploads.first.variant(resize: '200x200'), class: "w-100"), product_path(r.product.id))
+							= link_to(image_tag(r.product.uploads.first.variant(resize: '200x200'), class: "w-100 rounded"), product_path(r.product.id))
 						- else
-							= link_to(image_tag('placeholder.jpg', class: "w-100"), product_path(r.product.id))
-					.col-12.col-md-9
+							= link_to(image_tag('placeholder.jpg', class: "w-100 rounded"), product_path(r.product.id))
+					.col-9
 						.mt-3.mt-md-2= r.created_at.strftime("%b %d, %Y")
 						= image_tag("#{r.rating}star.png", class: "my-3")
 						.pt-1.pb-4= r.comment
