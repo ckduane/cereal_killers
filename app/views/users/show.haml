@@ -19,4 +19,4 @@
 					.col-12.col-md-9
 						.mt-3.mt-md-2= r.created_at.strftime("%b %d, %Y")
 						= image_tag("#{r.rating}star.png", class: "my-3")
-						.pt-1.pb-4= r.comment.html_safe
+						.pt-1.pb-4= r.comment
