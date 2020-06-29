@@ -19,6 +19,7 @@
 	transition: .3s all ease;
 	&:hover {
 		box-shadow: 0 1.5rem 3rem rgba(0,0,0,0.25), 0 1rem 1rem rgba(0,0,0,0.25) !important;
+		border-radius: 0 0 4rem 0;
 		transition: .3s all ease;
 	}
 	a:hover {
