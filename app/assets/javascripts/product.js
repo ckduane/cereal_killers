@@ -1,12 +1,14 @@
 $(document).ready(function(){
   $('.slider').slick({
     dots: false,
-    arrows: false,
 	  infinite: true,
 	  speed: 300,
 	  slidesToShow: 1,
 	  centerMode: true,
-	  variableWidth: true
+	  centerPadding: '40px',
+	  variableWidth: true,
+	  nextArrow: '<i class="fas fa-angle-right"></i>',
+	  prevArrow: '<i class="fas fa-angle-left"></i>'
   });
 
   $('#fileInput').on('change',function(){
