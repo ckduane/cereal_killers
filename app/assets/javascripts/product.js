@@ -4,8 +4,6 @@ $(document).ready(function(){
 	  infinite: true,
 	  speed: 300,
 	  slidesToShow: 1,
-	  centerMode: true,
-	  centerPadding: '40px',
 	  variableWidth: true,
 	  nextArrow: '<i class="fas fa-angle-right"></i>',
 	  prevArrow: '<i class="fas fa-angle-left"></i>'
