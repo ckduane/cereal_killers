@@ -15,6 +15,40 @@
 	height: 5rem;
 }
 
+.shadow.shadow-hover {
+	transition: .3s all ease;
+	&:hover {
+		box-shadow: 0 1.5rem 3rem rgba(0,0,0,0.25), 0 1rem 1rem rgba(0,0,0,0.25) !important;
+		border-radius: 0 0 4rem 0;
+		transition: .3s all ease;
+	}
+	a:hover {
+		color: $gray-900;
+	}
+}
+
+.slick-slide {
+	margin: 0 1px;
+}
+.slick-arrow {
+	cursor: pointer;
+	font-size: 4rem;
+	position: absolute;
+	bottom: -6rem;
+	transition: .3s all ease;
+	&:hover {
+		opacity: .5;
+		transition: .3s all ease;
+	}
+	&.fa-angle-right {
+		right: 1rem;
+	}
+	&.fa-angle-left {
+		right: 4rem;
+	}
+}
+
+
 @media screen and (min-width: 1024px) {
 	.svg {
 		height: 6rem;
