@@ -22,7 +22,10 @@
 			= image_tag('butcher.svg', class: 'svg')
 		- (5 - rating_average(@product.reviews).round).times do
 			= image_tag('butcher_blank.svg', class: 'svg')
-		%span / #{@product.reviews.length} reviews
+		- if @product.reviews.length == 1
+			%span / #{@product.reviews.length} review
+		- elsif @product.reviews.length > 1
+			%span / #{@product.reviews.length} reviews
 	- else
 		%p This cereal currently has no reviews.
 
