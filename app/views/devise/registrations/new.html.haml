@@ -1,5 +1,5 @@
 .container-fluid
-  %h2 Sign up
+  %h2.d-inline-block.shadow.bg-gray-900.text-light.rotate.px-5 Sign up
   = form_for(resource, html: {class: "form-group"}, as: resource_name, url: registration_path(resource_name)) do |f|
     = render "devise/shared/error_messages", resource: resource
     .field.form-group.pt-2

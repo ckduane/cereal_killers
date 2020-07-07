@@ -1,5 +1,5 @@
 .container-fluid
-  %h2 Log in
+  %h2.d-inline-block.shadow.bg-gray-900.text-light.rotate.px-5 Log in
   = form_for(resource, html: {class: "form-group"}, as: resource_name, url: session_path(resource_name)) do |f|
     .field.form-group
       = f.label :email
