@@ -1,5 +1,5 @@
 .container-fluid
-	%h1.text-center.text-md-left #{@product.name}
+	%h1.text-center.text-md-left.shadow.bg-gray-900.text-light.rotate-neg.d-inline-block.px-5 #{@product.name}
 
 	- if @product.uploads.attached?
 		.row.slider.my-4
@@ -32,7 +32,7 @@
 	- if has_reviews?
 		.container-fluid
 			.row
-				%h2 Reviews
+				%h2.shadow.bg-gray-900.text-light.rotate.d-inline-block.mb-4.px-5 Reviews
 			- @product.reviews.each do |r|
 				.row.bg-white.shadow.mb-4.py-4
 					.col-3
