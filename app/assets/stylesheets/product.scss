@@ -65,9 +65,6 @@
 	}
 }
 
-.slick-slide {
-	margin: 0 1px;
-}
 .slick-arrow {
 	cursor: pointer;
 	font-size: 4rem;
@@ -84,11 +81,6 @@
 	&.fa-angle-left {
 		right: 4rem;
 	}
-}
-
-.text-shadow {
-	text-shadow: 1px 1px #fb00ff, -1px 5px #00ff00;
-	;
 }
 
 @media screen and (min-width: 1024px) {
