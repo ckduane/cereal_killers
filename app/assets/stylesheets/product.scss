@@ -1,3 +1,5 @@
+@import "_variables";
+
 .cereal-img {
 	padding-bottom: 100%;
 	img {
@@ -20,7 +22,18 @@
 	&:hover {
 		box-shadow: 0 1.5rem 3rem rgba(0,0,0,0.25), 0 1rem 1rem rgba(0,0,0,0.25) !important;
 		border-radius: 0 0 4rem 0;
-		transition: .3s all ease;
+		transform: rotate(2deg);
+		transition: .2s all ease;
+		&:before {
+			content: "";
+			position: absolute;
+			bottom: 5px;
+			right: 3px;
+			box-shadow: inset 3px 3px 15px rgba(0,0,0,0.15);
+			border-radius: 0 0 4rem 0;
+			width: 2rem;
+			height: 2rem;
+		}
 	}
 	a:hover {
 		color: $gray-900;
