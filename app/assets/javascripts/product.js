@@ -10,7 +10,7 @@ $(document).ready(function(){
   });
 
   $('.slick-slide').addClass('bg-white p-3 pb-5 mx-3 shadow shadow-hover');
-  $('.slick-list').addClass('py-5')
+  $('.slick-list').addClass('px-4 py-5')
 
 
   $('#fileInput').on('change',function(){
