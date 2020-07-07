@@ -27,16 +27,29 @@
 		&:before {
 			content: "";
 			position: absolute;
-			bottom: 5px;
-			right: 3px;
-			box-shadow: inset 3px 3px 15px rgba(0,0,0,0.15);
-			border-radius: 0 0 4rem 0;
-			width: 2rem;
-			height: 2rem;
+			animation-duration: .2s;
+			animation-delay: .05s;
+			animation-name: cornerlift;
+			animation-fill-mode: forwards;
 		}
 	}
 	a:hover {
 		color: $gray-900;
+	}
+}
+
+@keyframes cornerlift {
+	from {
+		width: 0;
+		height: 0
+	}
+	to {
+		bottom: 5px;
+		right: 3px;
+		box-shadow: inset 3px 3px 15px rgba(0,0,0,0.15);
+		border-radius: 0 0 4rem 0;
+		width: 2rem;
+		height: 2rem;
 	}
 }
 

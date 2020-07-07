@@ -45,7 +45,7 @@
 								%div= r.created_at.strftime("%b %d, %Y")
 								= image_tag("#{r.rating}star.png")
 						.row
-							.col.comment
+							.col.text-break
 								%p= r.comment
 					- if user_signed_in? && owns_review?(r)
 						= link_to "Edit", edit_product_review_path(@product, r), class: "btn btn-primary my-3 mx-4"

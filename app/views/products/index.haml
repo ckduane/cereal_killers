@@ -12,4 +12,4 @@
 					- if p.reviews.length > 0
 						= image_tag("#{rating_average(p.reviews).round}star.png", class: 'my-3')
 
-					= link_to "#{p.name}", product_path(p.id), class: "stretched-link d-block text-gray-900"
+					= link_to "#{p.name}", product_path(p.id), class: "d-block m-auto stretched-link text-gray-900"
