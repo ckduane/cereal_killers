@@ -16,7 +16,7 @@
 					=image_tag('camera.svg', class: "icon mt-n2")
 					%span Add Photos
 
-	.bg-white.shadow.d-inline-block.px-4.py-3
+	.bg-white.shadow.d-inline-block.px-4.py-3.mt-3
 		- if has_reviews?
 			- rating_average(@product.reviews).round.times do
 				= image_tag('butcher.svg', class: 'svg')
