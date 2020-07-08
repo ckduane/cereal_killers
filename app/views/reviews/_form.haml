@@ -1,4 +1,4 @@
-= form_for [@product, @review] do |f|
+= form_for [@product, @review], html: { class: 'w-100' } do |f|
 	.field
 		= f.label :rating, '1. Rating', class: "d-block m-0 px-1 border border-bottom-0 border-dark rounded-0 bg-opacity"
 		.d-block.border.border-dark.border-bottom-0.p-1
