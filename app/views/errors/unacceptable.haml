@@ -1,0 +1,9 @@
+.container-fluid.py-5
+	.row.bg-yellow.shadow.p-4.m-auto
+		.col-2.col-md-1.border.border-dark.border-right-0.d-flex.align-items-center.justify-content-center
+			=image_tag('form/error.png', class: 'icon m-1')
+		.col-10.col-md-11.border.border-dark
+			%h3.text-center Change Rejected (Error 422)
+		.col-12.border.border-dark.border-bottom-0.d-flex.align-items-center.justify-content-center.p-5
+			=image_tag('form/422.png', class: 'm-1')
+		%small.d-block.border.border-dark.px-1.w-100 The change you wanted was rejected. If you are familiar with the application owner, perhaps they would appreciate a fresh box of cereal or two and you can get this problem figured out.
