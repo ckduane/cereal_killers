@@ -1,42 +1,42 @@
 .container-fluid
-  %h2.d-inline-block.shadow.bg-gray-900.text-light.rotate
-    Edit #{resource_name.to_s.humanize}
-  = image_tag(@user.thumbnail)
-  = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
-    = render "devise/shared/error_messages", resource: resource
-    .field.form-group.pt-2
-      = f.label :edit_avatar
-      %br/
-      = f.file_field :avatar, autofocus: true, accept: 'image/png,image/gif,image/jpeg', class: "form-control-file"
-    .field.form-group.pt-2
-      = f.label :username
-      %br/
-      = f.text_field :username, autofocus: true, autocomplete: "username", class: "form-control"
-    .field.form-group.pt-2
-      = f.label :email
-      %br/
-      = f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control"
-    - if devise_mapping.confirmable? && resource.pending_reconfirmation?
-      %div
-        Currently waiting confirmation for: #{resource.unconfirmed_email}
-    .field.form-group.pt-2
-      = f.label :current_password
-      %small.form-text.text-muted Enter your existing password
-      = f.password_field :current_password, autocomplete: "current-password", class: "form-control"
-    .field.form-group.pt-2
-      = f.label :new_password
-      %small.form-text.text-muted
-        = @minimum_password_length
-        characters minimum
-      = f.password_field :password, autocomplete: "new-password", class: "form-control"
-      - if @minimum_password_length
-    .field.form-group.pt-2
-      = f.label :password_confirmation
-      %br/
-      = f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control"
-    .actions.pt-2
-      = f.submit "Update", class: "btn btn-primary"
-  %br/
-  %p
-    Unhappy? #{button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-danger"}
-  = link_to "Back", :back, class: "d-block my-5"
+  .bg-yellow.shadow.p-4.m-5
+    %h3.text-center.border.border-dark.m-0.py-1
+      Edit #{resource_name.to_s.humanize} Form
+    .d-inline-block.bg-white.shadow.shadow-hover.text-center.my-3.p-3.pb-5
+      = image_tag(@user.thumbnail)
+    = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
+      = render "devise/shared/error_messages", resource: resource
+      .field
+        = f.label :edit_avatar, '1. Re-Upload Avatar', class: "d-block m-0 px-1 border border-bottom-0 border-dark rounded-0 bg-opacity"
+        = f.file_field :avatar, autofocus: true, accept: 'image/png,image/gif,image/jpeg', class: "form-control-file border border-bottom-0 border-dark rounded-0 p-2"
+      .field
+        = f.label :username, '2. Username', class: "d-block m-0 px-1 border border-bottom-0 border-dark rounded-0 bg-opacity"
+        = f.text_field :username, autofocus: true, autocomplete: "username", class: "form-control bg-transparent border-bottom-0 border-dark rounded-0"
+      .field
+        = f.label :email, '3. Primary Email Address', class: "d-block m-0 px-1 border border-bottom-0 border-dark rounded-0 bg-opacity"
+        = f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control bg-transparent border-bottom-0 border-dark rounded-0"
+      - if devise_mapping.confirmable? && resource.pending_reconfirmation?
+        .d-block.border.border-dark.rounded-0
+          Currently waiting confirmation for: #{resource.unconfirmed_email}
+      .field
+        = f.label :current_password, '4. Current Password', class: "d-block m-0 px-1 border border-bottom-0 border-dark rounded-0 bg-opacity"
+        %small.d-block.border.border-bottom-0.border-dark.px-1 Enter your existing password.
+        = f.password_field :current_password, autocomplete: "current-password", class: "form-control bg-transparent border-bottom-0 border-dark rounded-0"
+      .field
+        = f.label :new_password, '5a. New Password', class: "d-block m-0 px-1 border border-bottom-0 border-dark rounded-0 bg-opacity"
+        - if @minimum_password_length
+          %small.d-block.border.border-bottom-0.border-dark.px-1
+            Password must be
+            = @minimum_password_length
+            characters minimum. Passwords are case sensitive.
+        = f.password_field :password, autocomplete: "new-password", class: "form-control bg-transparent border-bottom-0 border-dark rounded-0"
+      .field
+        = f.label :password_confirmation, '5b. New Password Confirmation', class: "d-block m-0 px-1 border border-bottom-0 border-dark rounded-0 bg-opacity"
+        %small.d-block.border.border-bottom-0.border-dark.px-1 Please re-enter the password listed above.
+        = f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control bg-transparent border-dark rounded-0"
+      .actions.mt-1
+        = f.submit "Update Credentials", class: "mb-1 rounded-0"
+    %br/
+    %p
+      Unhappy? #{button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-danger"}
+    = link_to "Back", :back, class: "d-block my-5"
