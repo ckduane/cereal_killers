@@ -83,6 +83,11 @@
 	}
 }
 
+.overlap {
+	transform: translateX(2rem);
+	z-index: 2;
+}
+
 @media screen and (min-width: 1024px) {
 	.svg {
 		height: 6rem;

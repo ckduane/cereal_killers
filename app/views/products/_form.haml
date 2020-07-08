@@ -2,11 +2,13 @@
 
 	.field
 		= f.label :cereal_name, '1. Name of Cereal', class: "d-block m-0 px-1 border border-bottom-0 border-dark rounded-0 bg-opacity"
+		%small.d-block.border.border-dark.border-bottom-0.px-1.w-100 The name of the cereal is case sensitive. Please use capitalization where necessary.
 		= f.text_field :name, required: true, class: "form-control bg-transparent border-bottom-0 border-dark rounded-0"
 
 	.field
 		= f.fields_for :reviews do |r|
-			= r.label :rating, '2. Rating', class: "d-block m-0 px-1 border border-bottom-0 border-dark rounded-0 bg-opacity"
+			= r.label :rating, '2. Rating Scale', class: "d-block m-0 px-1 border border-bottom-0 border-dark rounded-0 bg-opacity"
+			%small.d-block.border.border-dark.border-bottom-0.px-1.w-100 Please select an icon. A rating of one is low, five is high.
 			.d-block.border.border-dark.border-bottom-0.p-1
 				.star-rating
 					= r.radio_button :rating, 1, required: true
