@@ -35,12 +35,12 @@
 				%h2.shadow.bg-gray-900.text-light.rotate.d-inline-block.mb-4.px-5 Reviews
 			- @product.reviews.each do |r|
 				.row.mb-5
-					.col-3
+					.col-3.overlap
 						.bg-white.shadow.shadow-hover.text-center.my-3.p-3
 							- if r.user.avatar.present?
 								= image_tag(r.user.thumbnail, class:"img-fluid rounded")
 							%h3.responsive-font.mt-3= link_to r.user.username, user_path(r.user.id), class: 'stretched-link'
-					.col-9.bg-yellow.shadow.underlap.p-4
+					.col-9.bg-yellow.shadow.p-4
 						.row.px-4
 							.col-2.col-md-1.border.border-dark.border-right-0.d-flex.align-items-center.justify-content-center
 								=image_tag('form/review.png', class: 'icon m-1')

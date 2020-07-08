@@ -83,9 +83,9 @@
 	}
 }
 
-.underlap {
-	transform: translateX(-2rem);
-	z-index: -1;
+.overlap {
+	transform: translateX(2rem);
+	z-index: 2;
 }
 
 @media screen and (min-width: 1024px) {
