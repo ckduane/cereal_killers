@@ -1,5 +1,5 @@
 .container-fluid
-	%h1.text-center.text-md-left #{@product.name}
+	%h1.text-center.text-md-left.shadow.bg-gray-900.text-light.rotate-neg.d-inline-block.px-5 #{@product.name}
 
 	- if @product.uploads.attached?
 		.row.slider.my-4
@@ -16,20 +16,23 @@
 					=image_tag('camera.svg', class: "icon mt-n2")
 					%span Add Photos
 
-
-	- if has_reviews?
-		- rating_average(@product.reviews).round.times do
-			= image_tag('butcher.svg', class: 'svg')
-		- (5 - rating_average(@product.reviews).round).times do
-			= image_tag('butcher_blank.svg', class: 'svg')
-		%span / #{@product.reviews.length} reviews
-	- else
-		%p This cereal currently has no reviews.
+	.bg-white.shadow.d-inline-block.px-4.py-3.mt-3
+		- if has_reviews?
+			- rating_average(@product.reviews).round.times do
+				= image_tag('butcher.svg', class: 'svg')
+			- (5 - rating_average(@product.reviews).round).times do
+				= image_tag('butcher_blank.svg', class: 'svg')
+			- if @product.reviews.length == 1
+				%span / #{@product.reviews.length} review
+			- elsif @product.reviews.length > 1
+				%span / #{@product.reviews.length} reviews
+		- else
+			%p This cereal currently has no reviews.
 
 	- if has_reviews?
 		.container-fluid
 			.row
-				%h2 Reviews
+				%h2.shadow.bg-gray-900.text-light.rotate.d-inline-block.mb-4.px-5 Reviews
 			- @product.reviews.each do |r|
 				.row.bg-white.shadow.mb-4.py-4
 					.col-3
@@ -42,7 +45,7 @@
 								%div= r.created_at.strftime("%b %d, %Y")
 								= image_tag("#{r.rating}star.png")
 						.row
-							.col.comment
+							.col.text-break
 								%p= r.comment
 					- if user_signed_in? && owns_review?(r)
 						= link_to "Edit", edit_product_review_path(@product, r), class: "btn btn-primary my-3 mx-4"

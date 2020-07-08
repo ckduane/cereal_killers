@@ -1,0 +1,21 @@
+.container-fluid
+  .bg-yellow.shadow.p-4.m-5
+    %h3.text-center.border.border-dark.m-0.py-1 Log In Form
+    %small.d-block.border.border-dark.border-bottom-0.px-1 Use this form after filling out the User Registration Application. Link to the application is listed in the navigation bar above or the link at the bottom.
+    = form_for(resource, html: {class: "form-group"}, as: resource_name, url: session_path(resource_name)) do |f|
+      .field
+        = f.label :email, '1. Primary E-mail Address', class: "d-block m-0 px-1 border border-bottom-0 border-dark rounded-0 bg-opacity"
+        = f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control bg-transparent border-bottom-0 border-dark rounded-0"
+      .field
+        = f.label :password, '2. Password', class: "d-block m-0 px-1 border border-bottom-0 border-dark rounded-0 bg-opacity"
+        = f.password_field :password, autocomplete: "current-password", class: "form-control bg-transparent border-bottom-0 border-dark rounded-0"
+      - if devise_mapping.rememberable?
+        .field
+          .d-block.m-0.px-1.border.border-bottom-0.border-dark.rounded-0.bg-opacity 3. Remember me
+          %small.d-block.border.border-dark.border-bottom-0.px-1 Check box below to remain logged in. Will void upon clicking sign out.
+          .d-block.m-0.px-1.border.border-dark.rounded-0
+            = f.check_box :remember_me
+            = f.label :remember_me, 'Yes, keep me logged in.', class: "form-check-label ml-1"
+      .actions.mt-1
+        = f.submit "Log in", class: "mb-1 rounded-0"
+    = render "devise/shared/links"

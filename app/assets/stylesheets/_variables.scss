@@ -1,7 +1,7 @@
 // Colors
 $c-red: #fd2020;
 $c-dark-red: #a00202;
-$c-yellow: #FDE74C;
+$c-yellow: #FFFE97;
 
 //Fonts
 $f-primary: 'Special Elite', serif;
@@ -30,4 +30,16 @@ $gray-300: #E7DFE0;
 
 .bg-gray-900 {
 	background-color: $gray-900;
+}
+
+.bg-cork {
+	background: url('https://cdn.pixabay.com/photo/2012/12/24/08/39/backdrop-72250_960_720.jpg');
+}
+
+.bg-yellow {
+	background-color: $c-yellow;
+}
+
+.bg-opacity {
+	background-color: rgba(0, 0, 0, 0.1);
 }

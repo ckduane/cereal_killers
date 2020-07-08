@@ -9,6 +9,10 @@ $(document).ready(function(){
 	  prevArrow: '<i class="fas fa-angle-left"></i>'
   });
 
+  $('.slick-slide').addClass('bg-white p-3 pb-5 mx-3 shadow shadow-hover');
+  $('.slick-list').addClass('px-4 py-5')
+
+
   $('#fileInput').on('change',function(){
 	  if($(this).get(0).files.length > 0){
 	    var fileSize = $(this).get(0).files[0].size;
