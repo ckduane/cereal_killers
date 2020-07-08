@@ -39,11 +39,12 @@ $gray-300: #E7DFE0;
 }
 
 .bg-cork {
-	background: url('https://cdn.pixabay.com/photo/2012/12/24/08/39/backdrop-72250_960_720.jpg');
+	background: url('cork-bg.jpg');
 }
 
 .bg-yellow {
 	background-color: $c-yellow;
+	max-width: 70rem;
 }
 
 .bg-opacity {
