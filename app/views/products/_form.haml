@@ -27,6 +27,16 @@
 	.field
 		= f.label :upload_images, '4. Images Taken from Incident (Optional)', class: "d-block m-0 px-1 border border-bottom-0 border-dark rounded-0 bg-opacity"
 		= f.file_field :uploads, multiple: true,  accept: 'image/png,image/gif,image/jpeg', class: "form-control-file border border-dark rounded-0 p-2", id: 'fileInput'
+
+	.row.mt-4.d-flex.justify-content-between
+		.col-6
+			.border-bottom.border-dark.rounded-0.px-1
+				= current_user.username
+			.d-block.m-0.px-1 Name of Person Submitting Report
+		.col-6
+			.border-bottom.border-dark.rounded-0.px-1
+				= DateTime.current.strftime("%B %-d, %Y")
+			.d-block.m-0.px-1 Date Report Submitted
 		
-		%br
+	.row.mx-1
 		= f.submit "Submit", class: "mt-1 rounded-0"
