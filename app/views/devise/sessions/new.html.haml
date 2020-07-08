@@ -1,18 +1,21 @@
 .container-fluid
-  .bg-yellow.shadow.p-4.m-5
-    %h3.text-center.border.border-dark.m-0.py-1 Log In Form
-    %small.d-block.border.border-dark.border-bottom-0.px-1 Use this form after filling out the User Registration Application. Link to the application is listed in the navigation bar above or the link at the bottom.
-    = form_for(resource, html: {class: "form-group"}, as: resource_name, url: session_path(resource_name)) do |f|
+  .row.bg-yellow.shadow.p-4.pb-5.m-5
+    .col-2.col-md-1.border.border-dark.border-right-0.d-flex.align-items-center.justify-content-center
+      =image_tag('form/admin.png', class: 'icon m-1')
+    .col-10.col-md-11.border.border-dark
+      %h3.text-center Log In Form
+    %small.d-block.border.border-dark.border-bottom-0.px-1.w-100 Use this form after filling out the User Registration Application. Link to the application is listed in the navigation bar above or the link at the bottom.
+    = form_for(resource, html: {class: "form-group w-100"}, as: resource_name, url: session_path(resource_name)) do |f|
       .field
-        = f.label :email, '1. Primary E-mail Address', class: "d-block m-0 px-1 border border-bottom-0 border-dark rounded-0 bg-opacity"
+        = f.label :email, '1. Primary E-mail Address', class: "d-block m-0 px-1 border border-bottom-0 border-dark rounded-0 bg-opacity w-100"
         = f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control bg-transparent border-bottom-0 border-dark rounded-0"
       .field
-        = f.label :password, '2. Password', class: "d-block m-0 px-1 border border-bottom-0 border-dark rounded-0 bg-opacity"
+        = f.label :password, '2. Secret Passcode', class: "d-block m-0 px-1 border border-bottom-0 border-dark rounded-0 bg-opacity w-100"
         = f.password_field :password, autocomplete: "current-password", class: "form-control bg-transparent border-bottom-0 border-dark rounded-0"
       - if devise_mapping.rememberable?
         .field
           .d-block.m-0.px-1.border.border-bottom-0.border-dark.rounded-0.bg-opacity 3. Remember me
-          %small.d-block.border.border-dark.border-bottom-0.px-1 Check box below to remain logged in. Will void upon clicking sign out.
+          %small.d-block.border.border-dark.border-bottom-0.px-1.w-100 Check box below to remain logged in. Will void logging out.
           .d-block.m-0.px-1.border.border-dark.rounded-0
             = f.check_box :remember_me
             = f.label :remember_me, 'Yes, keep me logged in.', class: "form-check-label ml-1"
