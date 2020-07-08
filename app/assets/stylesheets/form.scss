@@ -6,6 +6,13 @@ form {
 	a {
 	  font-size: 1.6rem;
 	}
+  input.form-control, input.form-control-file {
+    &:focus {
+      background: none;
+      border: 1px solid $gray-700;
+      box-shadow: none;
+    }
+  }
 }
 
 .star-rating {
