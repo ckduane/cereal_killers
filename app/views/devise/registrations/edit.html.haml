@@ -26,10 +26,10 @@
     .field.form-group.pt-2
       = f.label :new_password
       %small.form-text.text-muted
+      - if @minimum_password_length
         = @minimum_password_length
         characters minimum
       = f.password_field :password, autocomplete: "new-password", class: "form-control"
-      - if @minimum_password_length
     .field.form-group.pt-2
       = f.label :password_confirmation
       %br/
