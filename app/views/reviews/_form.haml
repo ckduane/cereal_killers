@@ -1,20 +1,21 @@
 = form_for [@product, @review] do |f|
-	.form-group
-		= f.label :rating
-		.star-rating
-			= f.radio_button :rating, 1, required: true
-			%i
-			= f.radio_button :rating, 2
-			%i
-			= f.radio_button :rating, 3
-			%i
-			= f.radio_button :rating, 4
-			%i
-			= f.radio_button :rating, 5
-			%i
+	.field
+		= f.label :rating, '1. Rating', class: "d-block m-0 px-1 border border-bottom-0 border-dark rounded-0 bg-opacity"
+		.d-block.border.border-dark.border-bottom-0.p-1
+			.star-rating
+				= f.radio_button :rating, 1, required: true
+				%i
+				= f.radio_button :rating, 2
+				%i
+				= f.radio_button :rating, 3
+				%i
+				= f.radio_button :rating, 4
+				%i
+				= f.radio_button :rating, 5
+				%i
 
-	.form-group
-		= f.label :comment
-		= f.rich_text_area :comment, required: true
+	.field
+		= f.label :comment, '2. Specific Description of Event', class: "d-block m-0 px-1 border border-bottom-0 border-dark rounded-0 bg-opacity"
+		= f.rich_text_area :comment, required: true, class: " bg-transparent border-dark rounded-0"
 
-		= f.submit "Submit", class: "btn btn-primary mt-4"
+		= f.submit "Submit", class: "mt-1 rounded-0"

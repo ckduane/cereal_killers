@@ -1,31 +1,32 @@
 = form_for @product do |f|
 
-	.form-group
-		= f.label :cereal_name
-		= f.text_field :name, required: true, class: "form-control"
+	.field
+		= f.label :cereal_name, '1. Name of Cereal', class: "d-block m-0 px-1 border border-bottom-0 border-dark rounded-0 bg-opacity"
+		= f.text_field :name, required: true, class: "form-control bg-transparent border-bottom-0 border-dark rounded-0"
 
-	.form-group
+	.field
 		= f.fields_for :reviews do |r|
-			= r.label :rating
-			.star-rating
-				= r.radio_button :rating, 1, required: true
-				%i
-				= r.radio_button :rating, 2
-				%i
-				= r.radio_button :rating, 3
-				%i
-				= r.radio_button :rating, 4
-				%i
-				= r.radio_button :rating, 5
-				%i
+			= r.label :rating, '2. Rating', class: "d-block m-0 px-1 border border-bottom-0 border-dark rounded-0 bg-opacity"
+			.d-block.border.border-dark.border-bottom-0.p-1
+				.star-rating
+					= r.radio_button :rating, 1, required: true
+					%i
+					= r.radio_button :rating, 2
+					%i
+					= r.radio_button :rating, 3
+					%i
+					= r.radio_button :rating, 4
+					%i
+					= r.radio_button :rating, 5
+					%i
 
-			.form-group
-				= r.label :review
-				= r.rich_text_area :comment, required: true
+			.field
+				= r.label :comment, '3. Specific Description of Event', class: "d-block m-0 px-1 border border-bottom-0 border-dark rounded-0 bg-opacity"
+				= r.rich_text_area :comment, required: true, class: " bg-transparent border-bottom-0 border-dark rounded-0"
 
-	.form-group
-		= f.label :upload_images
-		= f.file_field :uploads, multiple: true,  accept: 'image/png,image/gif,image/jpeg', class: "form-control-file", id: 'fileInput'
+	.field
+		= f.label :upload_images, '4. Images Taken from Incident (Optional)', class: "d-block m-0 px-1 border border-bottom-0 border-dark rounded-0 bg-opacity"
+		= f.file_field :uploads, multiple: true,  accept: 'image/png,image/gif,image/jpeg', class: "form-control-file border border-dark rounded-0 p-2", id: 'fileInput'
 		
 		%br
-		= f.submit "Submit", class: "btn btn-primary mt-4"
+		= f.submit "Submit", class: "mt-1 rounded-0"

@@ -37,6 +37,8 @@
   }
 }
 
-button.trix-button, trix-editor {
-  background: white;
+.trix-button-row {
+  border: 1px solid #343a40;
+  border-bottom: 0;
+  padding-top: 1rem;
 }
