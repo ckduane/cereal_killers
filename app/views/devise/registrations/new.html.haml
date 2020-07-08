@@ -9,7 +9,7 @@
         %small.d-block.border.border-dark.border-bottom-0.px-1 Default avatars will be assigned if one is not provided. Avatars may be changed at any time on the Account page.
         = f.file_field :avatar, accept: 'image/png,image/gif,image/jpeg', class: "form-control-file border border-bottom-0 border-dark rounded-0 p-2"
       .field
-        = f.label :username, '2. Username', class: "d-block m-0 px-1 border border-bottom-0 border-dark rounded-0 bg-opacity"
+        = f.label :username, '2. Alias', class: "d-block m-0 px-1 border border-bottom-0 border-dark rounded-0 bg-opacity"
         %small.d-block.border.border-dark.border-bottom-0.px-1 Usernames are requested to reflect a serial killer or a pun on cereals.
         = f.text_field :username, autofocus: true, class: "form-control bg-transparent border-bottom-0 border-dark rounded-0"
       .field
@@ -17,7 +17,7 @@
         %small.d-block.border.border-dark.border-bottom-0.px-1 E-mail addresses will not be used for marketing material or sold to a third party. E-mails are used for log-in purposes and password reset requests only. For further questions about e-mail use, please e-mail the administrator.
         = f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control bg-transparent border-bottom-0 border-dark rounded-0"
       .field
-        = f.label :password, '4a. Password', class: "d-block m-0 px-1 border border-bottom-0 border-dark rounded-0 bg-opacity"
+        = f.label :password, '4a. Secret Passcode', class: "d-block m-0 px-1 border border-bottom-0 border-dark rounded-0 bg-opacity"
         - if @minimum_password_length
           %small.d-block.border.border-bottom-0.border-dark.px-1
             Password must be
@@ -25,7 +25,7 @@
             characters minimum. Passwords are case sensitive.
         = f.password_field :password, autocomplete: "new-password", class: "form-control bg-transparent border-bottom-0 border-dark rounded-0"
       .field
-        = f.label :password_confirmation, '4b. Password Confirmation', class: "d-block m-0 px-1 border border-bottom-0 border-dark rounded-0 bg-opacity"
+        = f.label :password_confirmation, '4b. Passcode Confirmation', class: "d-block m-0 px-1 border border-bottom-0 border-dark rounded-0 bg-opacity"
         %small.d-block.border.border-bottom-0.border-dark.px-1 Please re-enter the password listed above.
         = f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control bg-transparent border-dark rounded-0"
       .actions.mt-1
