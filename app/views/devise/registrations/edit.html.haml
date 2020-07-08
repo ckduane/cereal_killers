@@ -19,7 +19,7 @@
         .d-block.border.border-dark.rounded-0
           Currently waiting confirmation for: #{resource.unconfirmed_email}
       .field
-        = f.label :current_password, '4. Current Passcode', class: "d-block m-0 px-1 border border-bottom-0 border-dark rounded-0 bg-opacity"
+        = f.label :current_password, '4. Current Passcode (Required)', class: "d-block m-0 px-1 border border-bottom-0 border-dark rounded-0 bg-opacity"
         %small.d-block.border.border-bottom-0.border-dark.px-1 Enter your existing passcode.
         = f.password_field :current_password, autocomplete: "current-password", class: "form-control bg-transparent border-bottom-0 border-dark rounded-0"
       .field
