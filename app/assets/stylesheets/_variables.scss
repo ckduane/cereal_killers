@@ -6,6 +6,7 @@ $c-yellow: #FFFE97;
 //Fonts
 $f-primary: 'Special Elite', serif;
 $f-secondary: 'Creepster', cursive;
+$f-tertiary: 'Homemade Apple', cursive;
 
 //Transitions
 $t-ease: color .3s ease;
@@ -22,6 +23,11 @@ $gray-300: #E7DFE0;
 
 .text-gray-700 {
 	color: $gray-700;
+}
+
+.cursive-font {
+	font-family: $f-tertiary;
+	font-weight: 600;
 }
 
 .bg-gray-300 {
