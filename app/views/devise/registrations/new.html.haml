@@ -4,23 +4,23 @@
     = form_for(resource, html: {class: "form-group"}, as: resource_name, url: registration_path(resource_name)) do |f|
       = render "devise/shared/error_messages", resource: resource
       .field
-        = f.label :upload_avatar, class: "d-block m-0 px-1 border border-dark rounded-0 bg-opacity"
-        = f.file_field :avatar, accept: 'image/png,image/gif,image/jpeg', class: "form-control-file border border-dark rounded-0 p-2"
+        = f.label :upload_avatar, class: "d-block m-0 px-1 border border-bottom-0 border-dark rounded-0 bg-opacity"
+        = f.file_field :avatar, accept: 'image/png,image/gif,image/jpeg', class: "form-control-file border border-bottom-0 border-dark rounded-0 p-2"
       .field
-        = f.label :username, class: "d-block m-0 px-1 border border-dark rounded-0 bg-opacity"
-        = f.text_field :username, autofocus: true, class: "form-control bg-transparent border-dark rounded-0"
+        = f.label :username, class: "d-block m-0 px-1 border border-bottom-0 border-dark rounded-0 bg-opacity"
+        = f.text_field :username, autofocus: true, class: "form-control bg-transparent border-bottom-0 border-dark rounded-0"
       .field
-        = f.label :email, class: "d-block m-0 px-1 border border-dark rounded-0 bg-opacity"
-        = f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control bg-transparent border-dark rounded-0"
+        = f.label :email, class: "d-block m-0 px-1 border border-bottom-0 border-dark rounded-0 bg-opacity"
+        = f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control bg-transparent border-bottom-0 border-dark rounded-0"
       .field
-        = f.label :password, class: "d-block m-0 px-1 border border-dark rounded-0 bg-opacity"
+        = f.label :password, class: "d-block m-0 px-1 border border-bottom-0 border-dark rounded-0 bg-opacity"
         - if @minimum_password_length
-          %small.d-block.border.border-dark.px-1
+          %small.d-block.border.border-bottom-0.border-dark.px-1
             = @minimum_password_length
             characters minimum
-        = f.password_field :password, autocomplete: "new-password", class: "form-control bg-transparent border-dark rounded-0"
+        = f.password_field :password, autocomplete: "new-password", class: "form-control bg-transparent border-bottom-0 border-dark rounded-0"
       .field
-        = f.label :password_confirmation, class: "d-block m-0 px-1 border border-dark rounded-0 bg-opacity"
+        = f.label :password_confirmation, class: "d-block m-0 px-1 border border-bottom-0 border-dark rounded-0 bg-opacity"
         = f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control bg-transparent border-dark rounded-0"
       .actions.mt-5
         = f.submit "Sign up", class: "btn btn-dark mb-5"
