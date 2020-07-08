@@ -1,11 +1,12 @@
 .container-fluid
-	%h2.d-inline-block.shadow.bg-gray-900.text-light.rotate.px-5 Forgot your password?
-	= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
-		= render "devise/shared/error_messages", resource: resource
-		.field.form-group
-			= f.label :email
-			%br/
-			= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control"
-		.actions.form-group
-			= f.submit "Send me reset password instructions", class: 'btn btn-primary'
-	= render "devise/shared/links"
+	.bg-yellow.shadow.p-4.m-5
+		%h3.text-center.border.border-dark.m-0.py-1 Password Reset Application Form
+		%small.d-block.border.border-dark.border-bottom-0.px-1 An email from 'cerealkillerscerealkillers@gmail.com' will be routed upon form submission with instructions for resetting password.
+		= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+			= render "devise/shared/error_messages", resource: resource
+			.field
+				= f.label :email, '1. Primary E-mail Address', class: "d-block m-0 px-1 border border-bottom-0 border-dark rounded-0 bg-opacity"
+				= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control bg-transparent  border-dark rounded-0"
+			.actions
+				= f.submit "Send reset instructions", class: 'mt-1 rounded-0'
+		= render "devise/shared/links"
