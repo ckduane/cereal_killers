@@ -1,6 +1,8 @@
 # CerealKillers
 
-Rails 6 app for reviewing and rating cereals with a serial killer theme
+This website is for filing incident initial and incident follow-up reports pertaining to various types of cereals in line with a serial killer theme.
+
+This application is built upon Rails 6.
 
 ## Technologies
 
