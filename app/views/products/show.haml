@@ -58,7 +58,7 @@
 						.row.mt-4.d-flex.justify-content-between
 							.col-5
 								.border-bottom.border-dark.rounded-0.px-1.cursive-font
-									= current_user.username
+									= r.user.username
 								.d-block.m-0.px-1 Signature of Person Submitting Report
 							.col-5
 								.border-bottom.border-dark.rounded-0.px-1
@@ -66,7 +66,7 @@
 								.d-block.m-0.px-1 Date Report Submitted
 							.col-5.mt-4
 								.border-bottom.border-dark.rounded-0.px-1
-									= current_user.username
+									= r.user.username
 								.d-block.m-0.px-1 Name of Person Submitting Report
 						.row.mt-4
 							- if user_signed_in? && owns_review?(r)
