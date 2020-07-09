@@ -2,7 +2,7 @@
 
 body {
 	font-family: $f-primary;
-	font-size: 1.6rem;
+	font-size: 1.3rem;
 	line-height: 1.5;
 }
 
@@ -20,6 +20,7 @@ h2 {
 }
 
 h3 {
+	font-size: 1.5rem;
 	margin-top: 0.5rem;
 	a {
 		color: black;
@@ -44,7 +45,14 @@ a {
 		transition: $t-ease;
 	}
 }
-
+@media screen and (min-width: 780px) {
+	body {
+		font-size: 1.6rem;
+	}
+	h3, h3.responsive-font {
+		font-size: 1.75rem;
+	}
+}
 @media screen and (min-width: 1024px) {
 	h1, h2 {
 		letter-spacing: .2rem;
@@ -55,7 +63,5 @@ a {
 	h2 {
 		font-size: 5rem;
 	}
-	h3.responsive-font {
-		font-size: 1.75rem;
-	}
+
 }
