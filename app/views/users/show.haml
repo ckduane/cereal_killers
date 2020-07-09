@@ -17,9 +17,9 @@
 					.col-3.overlap.p-0
 						.bg-white.shadow.shadow-hover.text-center.my-3.p-3
 							- if r.product.uploads.attached?
-								= link_to(image_tag(r.product.uploads.first.variant(resize: '200x200'), class: "w-100 rounded"), product_path(r.product.id))
+								= link_to(image_tag(r.product.uploads.first.variant(resize: '200x200'), class: "w-100"), product_path(r.product.id))
 							- else
-								= link_to(image_tag('placeholder.jpg', class: "w-100 rounded"), product_path(r.product.id))
+								= link_to(image_tag('placeholder.jpg', class: "w-100"), product_path(r.product.id))
 							%h3.responsive-font.mt-3= link_to r.product.name, product_path(r.product.id), class: 'stretched-link'
 					.col-9.bg-yellow.shadow.p-4
 						.row.px-4
