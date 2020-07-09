@@ -1,0 +1,13 @@
+.container
+	.row
+		.col-8
+			%h1.my-5.text-center.shadow.bg-gray-900.text-light.rotate Cereal Killers
+	.row
+		- @users.each do |u|
+			.col-6.col-md-4.col-lg-3
+				.bg-white.shadow.shadow-hover.text-center.my-3.p-3
+					- if u.avatar.present?
+						= image_tag(u.thumbnail, class: 'img-fluid')
+						%h3.mt-3= link_to u.username, user_path(u.id), class: 'stretched-link'
+						= u.reviews.length
+						= tally(u.reviews)
