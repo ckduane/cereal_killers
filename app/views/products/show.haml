@@ -38,7 +38,7 @@
 					.col-3.overlap
 						.bg-white.shadow.shadow-hover.text-center.my-3.p-3
 							- if r.user.avatar.present?
-								= image_tag(r.user.thumbnail, class:"img-fluid rounded")
+								= image_tag(r.user.thumbnail, class:"img-fluid ")
 							%h3.responsive-font.mt-3= link_to r.user.username, user_path(r.user.id), class: 'stretched-link'
 					.col-9.bg-yellow.shadow.p-4
 						.row.px-4
