@@ -14,7 +14,7 @@
 				%h2.shadow.bg-gray-900.text-light.rotate.d-inline-block.mb-4.px-5 Reviews
 			- @user.reviews.each do |r|
 				.row.mb-5
-					.col-3.overlap
+					.col-3.overlap.p-0
 						.bg-white.shadow.shadow-hover.text-center.my-3.p-3
 							- if r.product.uploads.attached?
 								= link_to(image_tag(r.product.uploads.first.variant(resize: '200x200'), class: "w-100 rounded"), product_path(r.product.id))

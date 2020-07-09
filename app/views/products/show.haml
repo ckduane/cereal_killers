@@ -35,7 +35,7 @@
 				%h2.shadow.bg-gray-900.text-light.rotate.d-inline-block.mb-4.px-5 Reviews
 			- @product.reviews.each do |r|
 				.row.mb-5
-					.col-3.overlap
+					.col-3.overlap.p-0
 						.bg-white.shadow.shadow-hover.text-center.my-3.p-3
 							- if r.user.avatar.present?
 								= image_tag(r.user.thumbnail, class:"img-fluid ")
