@@ -16,7 +16,9 @@
 	- if !@user.reviews.empty?
 		.container-fluid
 			.row
-				%h2.shadow.bg-gray-900.text-light.rotate.d-inline-block.mb-4.px-5 Reviews
+				.col-6
+					%h2.shadow.bg-gray-900.text-light.rotate.d-inline-block.mb-4.px-5 Reviews
+
 			- @user.reviews.each do |r|
 				.row.mb-5
 					.col-3.overlap.p-0
