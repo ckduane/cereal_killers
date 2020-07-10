@@ -5,18 +5,12 @@
 		.row.slider.my-4
 			- @product.uploads.each do |u|
 				= image_tag(u.variant(resize: '300x200').processed)
-
-	.container-fluid
+	- else
 		.row
-			- if user_signed_in? && !left_review?
-				= link_to "Write a Review", new_product_review_path(@product), class: "btn btn-primary my-3 mr-3"
-
-			- if user_signed_in?
-				=link_to new_product_upload_path(@product), class: 'btn btn-secondary my-3' do
-					=image_tag('camera.svg', class: "icon mt-n2")
-					%span Add Photos
-
-	.bg-white.shadow.d-inline-block.px-4.py-3.mt-3
+			.col-3.bg-yellow.shadow.p-5.m-5.rotate-neg
+				%h3.text-center Photographic Evidence not Submitted
+	
+	.bg-white.shadow.d-inline-block.px-4.py-3.mb-5
 		- if has_reviews?
 			- rating_average(@product.reviews).round.times do
 				= image_tag('butcher.svg', class: 'svg')
@@ -27,7 +21,17 @@
 			- elsif @product.reviews.length > 1
 				%span / #{@product.reviews.length} reviews
 		- else
-			%p This cereal currently has no reviews.
+			%p No incident reports have been filed for #{@product.name}.
+
+	- if user_signed_in?
+		.bg-gray-300.shadow.p-4.w-50.ml-5
+			.border.border-dark
+				%h3.text-center Requisitions
+			.border.border-dark.border-top-0
+				%li.p-2=link_to "Submit Photographic Evidence", new_product_upload_path(@product)
+				- if !left_review?
+					%li.border-dark.border-top.p-2= link_to "File Cereal Incident Report", new_product_review_path(@product)
+
 
 	- if has_reviews?
 		.container-fluid
