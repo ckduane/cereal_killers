@@ -2,11 +2,16 @@
 	%h1.text-center.shadow.bg-gray-900.text-light.rotate-neg.d-inline-block.px-5 #{@user.username}
 
 	.d-block
-		.d-inline-block.bg-white.shadow.shadow-hover.text-center.my-3.p-3.pb-5
+		.d-inline-block.bg-white.shadow.shadow-hover.text-center.my-3.p-3
 			= image_tag(@user.thumbnail, class: 'd-flex m-auto d-md-block m-md-0')
+			%h3.mt-3= @user.username
 
 	- if user_signed_in? && @user.username == current_user.username
-		%p= link_to "Edit Account", edit_user_registration_path(@user.id), class: "mt-1 rounded-0"
+		.bg-gray-300.shadow.p-4.w-50.ml-5
+			.border.border-dark
+				%h3.text-center Requisitions
+			.border.border-dark.border-top-0
+				%li.p-2= link_to "Edit Account", edit_user_registration_path(@user.id), class: "mt-1 rounded-0"
 
 	- if !@user.reviews.empty?
 		.container-fluid
