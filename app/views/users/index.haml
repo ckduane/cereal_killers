@@ -8,5 +8,7 @@
 				.bg-white.shadow.shadow-hover.text-center.my-3.p-3
 					- if u.avatar.present?
 						= image_tag(u.thumbnail, class: 'img-fluid')
-						%h3.mt-3= link_to u.username, user_path(u.id), class: 'stretched-link'
-						.text-danger= tally(u.reviews)
+					- else
+						= image_tag('avatar.png', class: 'img-fluid')
+					%h3.mt-3= link_to u.username, user_path(u.id), class: 'stretched-link'
+					.text-danger= tally(u.reviews)
