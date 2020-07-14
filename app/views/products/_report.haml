@@ -1,0 +1,37 @@
+.col-9.bg-yellow.shadow.p-4
+	.row.px-4
+		.col-2.col-md-1.border.border-dark.border-right-0.d-flex.align-items-center.justify-content-center
+			=image_tag('form/review.png', class: 'icon m-1')
+		.col-10.col-md-11.border.border-dark
+			%h3.text-center Cereal Incident Report Form
+
+	.row.px-4
+		.col-12.text-break.border.border-dark.border-bottom-0.bg-opacity.px-1
+			%div 1. Rating Scale
+		.col-12.border.border-dark.border-bottom-0.p-1
+			= image_tag("#{r.rating}star.png")
+		.col-12.text-break.border.border-dark.border-bottom-0.bg-opacity.px-1
+			%div 2. Specific Description of Incident
+		.col-12.border.border-dark.p-2
+			= r.comment
+
+	.row.mt-4.d-flex.justify-content-between
+		.col-5
+			.border-bottom.border-dark.rounded-0.px-1.cursive-font
+				= r.user.username
+			.d-block.m-0.px-1 Signature of Person Submitting Report
+		.col-5
+			.border-bottom.border-dark.rounded-0.px-1
+				= r.created_at.strftime("%B %-d, %Y")
+			.d-block.m-0.px-1 Date Report Submitted
+		.col-5.mt-4
+			.border-bottom.border-dark.rounded-0.px-1
+				= r.user.username
+			.d-block.m-0.px-1 Name of Person Submitting Report
+
+	.row.mt-4
+		- if user_signed_in? && owns_review?(r)
+			.col-12
+				= link_to "Revise or Follow Up on Report", edit_product_review_path(@product, r), class: "p-2"
+			.col-12
+				= link_to "Terminate Report", product_review_path(@product, r), :data => {:confirm => 'Are you sure you want to delete your review?'}, :method => :delete, class: "p-2"
