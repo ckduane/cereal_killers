@@ -7,6 +7,8 @@ class User < ApplicationRecord
   has_many :reviews
   has_one_attached :avatar
 
+  has_rich_text :description
+
   validates :username, uniqueness: { case_sensitive: false }
   validate :validate_username
 
