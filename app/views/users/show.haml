@@ -5,10 +5,9 @@
 		.col-6.col-md-5.col-lg-3.p-0.overlap
 			.bg-white.shadow.shadow-hover.text-center.my-3.p-3
 				= image_tag(@user.thumbnail, class: 'img-fluid')
-				%h3.mt-3= @user.username
-
+				.mt-3 Active Since: #{ @user.created_at.strftime("%B %-d, %Y") }
 		- if @user.description.present?
-			.col-6.bg-yellow.shadow.px-4.pb-5
+			.col-6.col-md-7.bg-yellow.shadow.px-4.pb-5
 				.row.p-4.d-block.h-100
 					.col-12.border.border-dark
 						%h3.text-center Suspect Description
