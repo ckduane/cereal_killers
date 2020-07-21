@@ -23,4 +23,9 @@ module UsersHelper
 		end
 	end
 
+	def murdering(users)
+		wrote_reviews = users.select { |u| u.reviews.length > 0 }
+		wrote_reviews.sort { |a, b| b.reviews.length <=> a.reviews.length }
+	end
+
 end
