@@ -18,4 +18,19 @@
 		= f.label :comment, '2. Specific Description of Event', class: "d-block m-0 px-1 border border-bottom-0 border-dark rounded-0 bg-opacity"
 		= f.rich_text_area :comment, required: true, class: " bg-transparent border-dark rounded-0"
 
+	.row.mt-4.d-flex.justify-content-between
+		.col-5
+			.border-bottom.border-dark.rounded-0.px-1.cursive-font
+				= current_user.username
+			.d-block.m-0.px-1 Signature of Person Submitting Report
+		.col-5
+			.border-bottom.border-dark.rounded-0.px-1
+				= DateTime.current.strftime("%B %-d, %Y")
+			.d-block.m-0.px-1 Date Report Submitted
+		.col-5.mt-4
+			.border-bottom.border-dark.rounded-0.px-1
+				= current_user.username
+			.d-block.m-0.px-1 Name of Person Submitting Report
+			
+	.row.mx-1.mt-3
 		= f.submit "Submit", class: "mt-1 rounded-0"
