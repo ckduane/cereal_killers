@@ -9,7 +9,7 @@ module UsersHelper
 		else
 			quotient = reviews.length / 5
 			
-			quotient.times do
+			(quotient - 1).times do
 				count << tallies[4]
 			end
 
