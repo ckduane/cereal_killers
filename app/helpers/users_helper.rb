@@ -15,7 +15,9 @@ module UsersHelper
 
 			remainder = reviews.length % 5
 
-			count << tallies[remainder - 1]
+			if remainder != 0
+				count << tallies[remainder - 1]
+			end
 
 			count.join("")
 		end
