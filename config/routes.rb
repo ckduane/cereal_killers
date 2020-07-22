@@ -3,7 +3,8 @@ Rails.application.routes.draw do
 
   resources :products do
   	resources :reviews
-  	resources :uploads
+  	resources :uploads, only: [:create, :new]
+    resources :photos, only: [:create, :new]
   end
 
   devise_for :users, controllers: {

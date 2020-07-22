@@ -31,6 +31,9 @@
 				%li.p-2=link_to "Submit Photographic Evidence", new_product_upload_path(@product)
 				- if !left_review?
 					%li.border-dark.border-top.p-2= link_to "File Cereal Incident Report", new_product_review_path(@product)
+				- if current_user.email == "ckduane@pm.me"
+					%li.p-2.border-top.border-dark=link_to "Submit Official Photo", new_product_photo_path(@product)
+
 
 	- if has_reviews?
 		.container-fluid

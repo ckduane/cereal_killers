@@ -1,0 +1,23 @@
+= form_for @product, html: { class: 'w-100' } do |f|
+
+	.form-group
+		= f.label :upload_photo, 'Upload Official Photo', class: "d-block m-0 px-1 border border-bottom-0 border-dark rounded-0 bg-opacity"
+		= f.file_field :photo,  accept: 'image/png,image/gif,image/jpeg', class: "form-control-file border border-dark rounded-0 p-2", id: "fileInput"
+
+	.row.mt-4.d-flex.justify-content-between
+		.col-5
+			.border-bottom.border-dark.rounded-0.px-1.cursive-font
+				= current_user.username
+			.d-block.m-0.px-1 Signature of Person Submitting Images
+		.col-5
+			.border-bottom.border-dark.rounded-0.px-1
+				= DateTime.current.strftime("%B %-d, %Y")
+			.d-block.m-0.px-1 Date Images Submitted
+		.col-5.mt-4
+			.border-bottom.border-dark.rounded-0.px-1
+				= current_user.username
+			.d-block.m-0.px-1 Name of Person Submitting Images
+		
+	.row.mx-1.mt-3
+
+		= f.submit "Submit", class: "mt-1 rounded-0"
