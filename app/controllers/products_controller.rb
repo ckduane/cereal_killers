@@ -39,8 +39,14 @@ class ProductsController < ApplicationController
 	end
 
 	def update
+		if params[:product][:uploads].present?
+			@product.uploads.attach(params[:product][:uploads])
+		end
+		if params[:product][:photo].present?
+			@product.photo.attach(params[:product][:photo])
+		end
 		respond_to do |format|
-			if @product.uploads.attach(params[:product][:uploads])
+			if @product.update(product_params)
 				format.html { redirect_to @product, notice: 'Photo was successfully added.' }
 				format.json { render :show, status: :ok, location: @product }
 			else
@@ -54,6 +60,10 @@ class ProductsController < ApplicationController
 
 	def find_product
 		@product = Product.find_by(id: params[:id])
+	end
+
+	def product_params
+		params.require(:product).permit(:name)
 	end
 
 end

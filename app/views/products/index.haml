@@ -4,10 +4,9 @@
 			%h1.my-5.text-center.shadow.bg-gray-900.text-light.rotate.px-3 Your next cereal awaits
 	.row
 		- @products.each do |p|
-			.col-2
+			.col-3
 				- if p.photo.attached?
 					.cereal-img= link_to(image_tag(p.photo.variant(resize: '300x300'), class: "w-100 h-100"), product_path(p.id))
 				- else
 					.cereal-img= link_to(image_tag('placeholder.jpg', class: "w-100 h-100"), product_path(p.id))
-
-				= link_to "#{p.name}", product_path(p.id), class: "d-block m-auto stretched-link text-gray-900"
+					= link_to "#{p.name}", product_path(p.id), class: "d-block m-auto stretched-link text-gray-900"
