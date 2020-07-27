@@ -21,6 +21,29 @@
 	transform: rotate(-1.5deg);
 }
 
+.shelf {
+	background-image: linear-gradient(#9c992e 0%, #ffdf86 57%, #696100);
+	position: relative;
+	height: 2.5rem;
+}
+
+.label {
+	left: 50%;
+	bottom: 1.5rem;
+	max-width: 15rem;
+	transform: translateX(-50%);
+	font-family: 'Lato';
+	font-size: 12px;
+	.bg-white {
+		min-height: 4rem;
+		min-width: 9rem;
+	}
+}
+
+.price {
+	font-weight: 900;
+}
+
 .svg {
 	height: 5rem;
 }
