@@ -1,4 +1,4 @@
-.container
+.container-fluid.bg-cork
 	%h1.text-center.shadow.bg-gray-900.text-light.rotate-neg.d-inline-block.px-5 #{@user.username}
 
 	.row.py-4
@@ -7,7 +7,7 @@
 				= image_tag(@user.thumbnail, class: 'img-fluid')
 				.mt-3 Active Since: #{ @user.created_at.strftime("%B %-d, %Y") }
 		- if @user.description.present?
-			.col-6.col-md-7.bg-yellow.shadow.px-4.pb-5
+			.col-5.col-md-6.bg-yellow.shadow.px-4.pb-5
 				.row.p-4.d-block.h-100
 					.col-12.border.border-dark
 						%h3.text-center Suspect Description
