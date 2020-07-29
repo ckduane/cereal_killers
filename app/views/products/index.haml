@@ -1,7 +1,7 @@
 .container-fluid.m-0.p-0
 	.row.w-100.m-0.d-flex.align-items-end.bg-gray-900
 		- @products.each do |p|
-			.col-4.col-md-3.col-lg-2.p-0.py-5.m-0.cereal-img
+			.col-4.col-md-3.col-lg-2.p-0.py-5.m-0.cereal-img.shelf-top
 				- if p.photo.attached?
 					= link_to(image_tag(p.photo.variant(resize: '300x300'), class: "h-auto w-100 px-1"), product_path(p.id))
 				- else
