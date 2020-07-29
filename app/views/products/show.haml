@@ -4,7 +4,7 @@
 	- if @product.uploads.attached?
 		.row.slider.my-4
 			- @product.uploads.each do |u|
-				= image_tag(u.variant(resize: '300x200').processed)
+				= link_to(image_tag(u.variant(resize: '300x200').processed), url_for(u), class: "image-link")
 	- else
 		.row
 			.col-3.bg-yellow.shadow.p-5.m-5.rotate-neg
