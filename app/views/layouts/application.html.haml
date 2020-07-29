@@ -9,11 +9,11 @@
     = stylesheet_link_tag "application", media: 'all'
   %body.text-gray-900.d-flex.flex-column.h-100.m-0
     - if notice.present?
-      %p.alert.alert-success= notice
+      %p.alert.alert-success.m-0= notice
     - if alert.present?
-      %p.alert.alert-danger= alert
+      %p.alert.alert-danger.m-0= alert
     - if @errors.present?
-      %p.alert.alert-danger= @errors
+      %p.alert.alert-danger.m-0= @errors
     %nav.nav.bg-gray-900
       = link_to "Cereal Killers", root_path, class: "nav-link"
       = link_to "Cereals", products_path, class: "nav-link"
