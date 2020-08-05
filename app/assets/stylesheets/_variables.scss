@@ -42,6 +42,10 @@ $gray-300: #E7DFE0;
 	background-image: image-url('bg/cork-bg.jpg');
 }
 
+.bg-desk {
+	background-image: url('bg/wood-bg.jpg')
+}
+
 .bg-yellow {
 	background-color: $c-yellow;
 	max-width: 70rem;
